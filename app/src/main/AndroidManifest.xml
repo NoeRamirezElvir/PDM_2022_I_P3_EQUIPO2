@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hn.edu.ujcv.pdm_2022_i_p3_equipo3">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3">
+        <activity
+            android:name=".RegistrarUsuarioActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerUsuarioActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_usuario"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarCarnetActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_carnet"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerCarnetVacunacionActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_carnet_vacunacion"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarVacunaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_vacuna"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerVacunasActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_vacunas"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarCivilActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_civil"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerCivilesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_civiles"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarEnfermeroActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_enfermero"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerEnfermerosActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".MenuPrincipalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

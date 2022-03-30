@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_vacuna"
+    android:layout_margin="5dp"
+    android:foreground="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="#FF8DDDBB"
+    app:cardCornerRadius="7dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayoutVacuna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/imbtBorrarEnfermeroR"
+        app:layout_constraintTop_toTopOf="@+id/imbtBorrarEnfermeroR">
+
+        <ImageView
+            android:id="@+id/itemImageUsuario"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/enfermero_recyclerview"
+            android:src="@drawable/im_user"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/itemNombreUsuario"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/nombre_vacuna"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/itemImageUsuario"
+            app:layout_constraintStart_toEndOf="@id/itemImageUsuario"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/itemCorreoElectronicoUsuario"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/correo_usuario"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.623"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemContraUsuario"
+            app:layout_constraintVertical_bias="0.764" />
+
+        <TextView
+            android:id="@+id/itemContraUsuario"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/contra_usuario"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@id/itemImageUsuario"
+            app:layout_constraintStart_toEndOf="@id/itemImageUsuario"
+            app:layout_constraintTop_toBottomOf="@id/itemNombreUsuario" />
+
+        <ImageButton
+            android:id="@+id/imbtBorrarUsuarioR"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="#FF22A36C"
+            android:contentDescription="@string/btn_eliminar_efermeror"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_borrar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imbtEditarUsuarioR"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#FF22A36C"
+            android:contentDescription="@string/btn_editar_enfermeror"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_actualizar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

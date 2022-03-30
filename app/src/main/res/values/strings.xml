@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">PDM_2022_I_P3_EQUIPO3</string>
+    <string-array name="spnSexo">
+        <item> Masculino</item>
+        <item> Femenino</item>
+    </string-array>
+    <string name="user">Código</string>
+    <string name="password">Contraseña</string>
+    <string name="bienvenido">¡Bienvenido!</string>
+    <string name="password_recuperar">¿Olvido su contraseña?</string>
+    <string name="user_nuevo">¿No tiene una cuenta de usuario?</string>
+    <string name="registrar_user">Registrar</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="btn_enfermeros">Enfermeros</string>
+    <string name="enfermero_recyclerview">imagen enfermero recyclerview</string>
+    <string name="btn_eliminar_efermeror">Eliminar</string>
+    <string name="btn_editar_enfermeror">Editar</string>
+    <string name="txt_codigo_buscar">Código</string>
+    <string name="btn_enfermerosR">boton buscar enfermeros re</string>
+    <string name="id_txtre">ID</string>
+    <string name="nombre_enfermero">Nombre</string>
+    <string name="dni_enfermero">DNI</string>
+    <string name="cargo_enfermero">Cargo</string>
+    <string name="numero_de_telefono_enfermero">Numero de Telefono</string>
+    <string name="correo_electronico_enfermero">Correo Electronico</string>
+    <string name="login">Login</string>
+    <string name="btn_civiles">Civiles</string>
+    <string name="btn_usuarios">Usuarios</string>
+    <string name="btn_vacuna">Vacunas</string>
+    <string name="btn_carnet">Carnet de Vacunación</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_registrar_enfermero">RegistrarEnfermeroActivity</string>
+    <string name="agregar_imagen_enfermero">Agregar Imagen</string>
+    <string name="codigo_enfermero">Código</string>
+    <string name="imagen_galeria">imagen galeria</string>
+    <string name="registrar_enfermero">Registrar</string>
+    <string name="actualizar_enfermero">Actualizar</string>
+    <string name="title_activity_ver_civiles">VerCivilesActivity</string>
+    <string name="buscar_dni">DNI</string>
+    <string name="title_activity_registrar_civil">RegistrarCivilActivity</string>
+    <string name="id_civil">ID</string>
+    <string name="dni_civil">DNI</string>
+    <string name="nombre_civil">Nombre</string>
+    <string name="apellido_civil">Apellido</string>
+    <string name="numero_telefono_civil">Numero de Telefono</string>
+    <string name="direccion_civil">Dirección</string>
+    <string name="fecha_de_nacimiento_civil">Fecha de Nacimiento</string>
+    <string name="nombre_vacuna">Nombre</string>
+    <string name="fabricante_vacuna">Fabricante</string>
+    <string name="fecha_f_vacuna">Fecha F</string>
+    <string name="fecha_v_vacuna">Fecha V</string>
+    <string name="numero_lote_vacuna">Numero Lote</string>
+    <string name="title_activity_ver_vacunas">VerVacunasActivity</string>
+    <string name="id_vacuna">ID</string>
+    <string name="title_activity_registrar_vacuna">RegistrarVacunaActivity</string>
+    <string name="nombre_del_fabricante_vacuna">Nombre del Fabricante</string>
+    <string name="nombre_de_vacuna">Nombre de la Vacuna</string>
+    <string name="numero_de_lote_vacuna">Numero de Lote</string>
+    <string name="fecha_de_fabricacion_vacuna">Fecha de Fabricación</string>
+    <string name="fecha_de_vencimiento_vacuna">Fecha de Vencimiento</string>
+    <string name="title_activity_ver_carnet_vacunacion">VerCarnetVacunacionActivity</string>
+    <string name="nombre_carnet">Nombre</string>
+    <string name="centro_salud_carnet">Centro de Salud</string>
+    <string name="fecha_carnet">Fecha</string>
+    <string name="numero_telefono_carnet">Numero de Telefono</string>
+    <string name="nombre_del_vacunador_carnet">Nombre del Vacunador</string>
+    <string name="tipo_de_vacuna_carnet">Tipo de Vacuna</string>
+    <string name="dni_carnet">DNI</string>
+    <string name="title_activity_registrar_carnet">RegistrarCarnetActivity</string>
+    <string name="title_activity_ver_usuario">VerUsuarioActivity</string>
+    <string name="correo_usuario">Correo Electronico</string>
+    <string name="contra_usuario">Contraseña Usuario</string>
+    <string name="nombre_usuario">Nombre Usuario</string>
+    <string name="id_usuario">ID</string>
+    <string name="user_usuario">Usuario</string>
+    <string name="correo_electronico_usuario">Correo Electronico</string>
+    <string name="confirmar_contra_usuario">Confirmar Contraseña</string>
+    <string name="contraseña_usuario">Contraseña</string>
+</resources>

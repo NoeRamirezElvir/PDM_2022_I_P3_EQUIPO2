@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_vacuna"
+    android:layout_margin="5dp"
+    android:foreground="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="#FF8DDDBB"
+    app:cardCornerRadius="7dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayoutVacuna"
+        android:layout_width="wrap_content"
+        android:layout_height="186dp"
+        app:layout_constraintBottom_toTopOf="@+id/imbtBorrarEnfermeroR"
+        app:layout_constraintTop_toTopOf="@+id/imbtBorrarEnfermeroR">
+
+        <TextView
+            android:id="@+id/itemNombreCivilCarnet"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#FF1F9472"
+            android:text="@string/nombre_carnet"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imbtEditarCarnetR"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/itemNombreCentroSaludCarnet"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/centro_salud_carnet"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemNombreCivilCarnet" />
+
+        <TextView
+            android:id="@+id/itemDniCarnet"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/dni_carnet"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imbtEditarCarnetR"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemNombreCivilCarnet"
+            app:layout_constraintVertical_bias="0.064" />
+
+        <TextView
+            android:id="@+id/itemFechaNacimientoCarnet"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/fecha_carnet"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemNombreCentroSaludCarnet" />
+
+        <TextView
+            android:id="@+id/itemNumeroTelefonoCarnet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/numero_telefono_carnet"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/itemVacunador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.591"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemFechaNacimientoCarnet"
+            app:layout_constraintVertical_bias="0.366" />
+
+        <TextView
+            android:id="@+id/itemNumeroLoteCarnet"
+            android:layout_width="130dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/numero_lote_vacuna"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/itemVacunador"
+            app:layout_constraintEnd_toStartOf="@+id/imbtBorrarCarnetR"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemFechaNacimientoCarnet"
+            app:layout_constraintVertical_bias="0.09" />
+
+        <TextView
+            android:id="@+id/itemVacunador"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre_del_vacunador_carnet"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imbtBorrarCarnetR"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/itemVacunaCarnet" />
+
+        <TextView
+            android:id="@+id/itemVacunaCarnet"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tipo_de_vacuna_carnet"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemNumeroLoteCarnet"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/imbtBorrarCarnetR"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#FF22A36C"
+            android:contentDescription="@string/btn_eliminar_efermeror"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_borrar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/itemNumeroTelefonoCarnet"
+            app:layout_constraintTop_toBottomOf="@+id/imbtEditarCarnetR"
+            app:layout_constraintVertical_bias="0.084" />
+
+        <ImageButton
+            android:id="@+id/imbtEditarCarnetR"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#FF22A36C"
+            android:contentDescription="@string/btn_editar_enfermeror"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_actualizar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
