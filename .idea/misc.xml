@@ -3,6 +3,47 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/btn_municipio.xml" value="0.1245" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/ic_establecimiento.xml" value="0.112" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/ic_icono_vacunacion__1_.xml" value="0.1245" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/ic_municipio.xml" value="0.112" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/icono_centro_vac.xml" value="0.1125" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/txt_registros.xml" value="0.112" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_menu_principal.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_centro_vacunacion.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_establecimiento_salud.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_municipio.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_region_sanitaria.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.17" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_vacuna.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_carnet_vacunacion.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_centro_vacunacion.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_enfermeros.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_establecimientos.xml" value="0.14356884057971014" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_municipios.xml" value="0.14356884057971014" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_region_sanitaria.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_usuario.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_centro_vacunacion.xml" value="0.22" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_empleado.xml" value="0.14990942028985507" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_establecimientos.xml" value="0.22" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_municipio.xml" value="0.21" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_region.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_usuario.xml" value="0.14356884057971014" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_vacuna.xml" value="0.14356884057971014" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_carnet.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_centro_vacunacion.xml" value="0.15" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_civil.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_enfermero.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_establecimiento_salud.xml" value="0.17" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_municipio.xml" value="0.17" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_region_sanitaria.xml" value="0.17" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_vacuna.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_centro_vacunacion.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_enfermeros.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_establecimientos.xml" value="0.14356884057971014" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_municipios.xml" value="0.14356884057971014" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_region_sanitaria.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/nblad/Desktop/PDM_2022_I_P3_EQUIPO3/app/src/main/res/drawable-v24/btn_login.xml" value="0.104" />
         <entry key="..\:/Users/nblad/Desktop/PDM_2022_I_P3_EQUIPO3/app/src/main/res/drawable/btn_login.xml" value="0.104" />
         <entry key="..\:/Users/nblad/Desktop/PDM_2022_I_P3_EQUIPO3/app/src/main/res/drawable/btn_otro.xml" value="0.2075" />

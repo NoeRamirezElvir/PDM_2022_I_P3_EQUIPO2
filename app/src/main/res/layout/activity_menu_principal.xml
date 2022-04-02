@@ -18,7 +18,7 @@
                 android:id="@+id/btnEnfermeros"
                 android:layout_width="185dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="80dp"
                 android:layout_marginStart="125dp"
                 android:layout_marginBottom="12dp"
                 android:drawableLeft="@drawable/ic_btn_enfermeros"
@@ -60,7 +60,45 @@
                 android:drawableLeft="@drawable/ic_btn_carnet"
                 android:text="@string/btn_carnet" />
 
+            <Button
+                android:id="@+id/btnRegionSanitaria"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/btn_region_sanitaria"
+                android:text="@string/region_sanitaria" />
+
+            <Button
+                android:id="@+id/btnMunicipio"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/btn_municipio"
+                android:text="@string/btn_municipios" />
+
+            <Button
+                android:id="@+id/btnEstablecimientos"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/btn_establecimientos_de_salud"
+                android:drawableLeft="@drawable/btn_establecimiento"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/btnCentros"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/btn_centros_vacunacion"
+                android:drawableLeft="@drawable/btn_centro_vacunacion"
+                android:textSize="11sp"/>
         </LinearLayout>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

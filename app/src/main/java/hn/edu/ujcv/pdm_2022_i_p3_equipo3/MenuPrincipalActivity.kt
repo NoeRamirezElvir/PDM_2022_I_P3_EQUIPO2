@@ -29,5 +29,21 @@ class MenuPrincipalActivity : AppCompatActivity() {
             val intent= Intent(this,VerUsuarioActivity::class.java)
             startActivity(intent)
         }
+        btnRegionSanitaria.setOnClickListener {
+            val intent = Intent(this, VerRegionSanitariaActivity::class.java)
+            startActivity(intent)
+        }
+        btnMunicipio.setOnClickListener {
+            val intent = Intent(this, VerMunicipiosActivity::class.java)
+            startActivity(intent)
+        }
+        btnEstablecimientos.setOnClickListener {
+            val intent = Intent(this, VerEstablecimientosActivity::class.java)
+            startActivity(intent)
+        }
+        btnCentros.setOnClickListener {
+            val intent = Intent(this, VerCentroVacunacionActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

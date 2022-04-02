@@ -10,6 +10,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3">
         <activity
+            android:name=".VerCentroVacunacionActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_centro_vacunacion"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerEstablecimientosActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_establecimientos"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerMunicipiosActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_municipios"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerRegionSanitariaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_region_sanitaria"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarCentroVacActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_centro_vacunacion"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarEstablecimientoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_establecimiento_salud"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarMunicipioActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_municipio"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarRegionSanitariaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_region_sanitaria"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
             android:name=".RegistrarUsuarioActivity"
             android:exported="false"
             android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
