@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
-        android:text="@string/bienvenido"
-        android:textColor="@color/black"
+        android:text="Login"
+        android:textColor="#101759"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txtCodigoUsuario"
@@ -34,27 +34,12 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
 
-    <Button
-        android:id="@+id/btnIniciarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/btn_login"
-        android:text="@string/iniciar_sesion"
-        android:textColor="@color/white"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/txtRegistrarUsuario"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck" />
-
     <TextView
         android:id="@+id/txtRegistrarUsuarioAcceso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="100dp"
         android:text="@string/registrar_user"
         android:textColor="@color/black"
         android:textStyle="italic|bold"
@@ -62,18 +47,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtRegistrarUsuario" />
 
-    <TextView
-        android:id="@+id/txvLogin"
+    <Button
+        android:id="@+id/btnIniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/login"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_login"
+        android:text="@string/iniciar_sesion"
+        android:textColor="@color/white"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@id/txvRecuperarContra"
+        app:layout_constraintBottom_toTopOf="@+id/txtRegistrarUsuario"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="TextContrastCheck" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtContraseUsuario"
@@ -81,7 +71,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:background="#FFC0BEFF"
+        android:background="#81AFCD"
         android:hint="@string/password"
         app:boxStrokeColor="#FF3946A1"
         app:counterEnabled="true"
@@ -108,12 +98,12 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="220dp"
-        android:background="#FFC0BEFF"
+        android:background="#81AFCD"
+        android:hint="@string/user"
         app:boxStrokeColor="#FF3946A1"
         app:counterEnabled="true"
         app:counterMaxLength="10"
         app:helperText="*Obligatorio"
-        android:hint="@string/user"
         app:layout_constraintEnd_toEndOf="@+id/txtContraseUsuario"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtContraseUsuario"
@@ -134,7 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="60dp"
         android:text="@string/password_recuperar"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"

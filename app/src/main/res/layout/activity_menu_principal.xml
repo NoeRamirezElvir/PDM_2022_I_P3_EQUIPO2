@@ -4,67 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img_vacuna_honduras"
     tools:context=".MenuPrincipalActivity">
 
+    <TextView
+        android:id="@+id/txvBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Bienvenido : Usuario"
+        android:textColor="#101759"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="Control de Vacunación \n\t\t\t\t\t\t\t\t\t\tCOVID-19"
+        android:textColor="#101759"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvBienvenida" />
+
     <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_marginTop="160dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvTitulo">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/btnEnfermeros"
-                android:layout_width="185dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginStart="125dp"
-                android:layout_marginBottom="12dp"
-                android:drawableLeft="@drawable/ic_btn_enfermeros"
-                android:text="@string/btn_enfermeros" />
-
-            <Button
-                android:id="@+id/btnCiviles"
-                android:layout_width="185dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="125dp"
-                android:layout_marginBottom="12dp"
-                android:drawableLeft="@drawable/ic_btn_civiles"
-                android:text="@string/btn_civiles" />
-
-            <Button
-                android:id="@+id/btnUsuarios"
-                android:layout_width="185dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="125dp"
-                android:layout_marginBottom="12dp"
-                android:drawableLeft="@drawable/ic_btn_user"
-                android:text="@string/btn_usuarios" />
-
-            <Button
-                android:id="@+id/btnVacuna"
-                android:layout_width="185dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="125dp"
-                android:layout_marginBottom="12dp"
-                android:drawableLeft="@drawable/ic_btn_vacuna"
-                android:text="@string/btn_vacuna" />
-
-            <Button
-                android:id="@+id/btnCarnet"
-                android:layout_width="185dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="125dp"
-                android:layout_marginBottom="12dp"
-                android:drawableLeft="@drawable/ic_btn_carnet"
-                android:text="@string/btn_carnet" />
-
-            <Button
                 android:id="@+id/btnRegionSanitaria"
+                android:layout_marginTop="10dp"
                 android:layout_width="185dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="125dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
                 android:layout_marginBottom="12dp"
                 android:drawableLeft="@drawable/btn_region_sanitaria"
                 android:text="@string/region_sanitaria" />
@@ -73,7 +63,8 @@
                 android:id="@+id/btnMunicipio"
                 android:layout_width="185dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="125dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
                 android:layout_marginBottom="12dp"
                 android:drawableLeft="@drawable/btn_municipio"
                 android:text="@string/btn_municipios" />
@@ -82,7 +73,8 @@
                 android:id="@+id/btnEstablecimientos"
                 android:layout_width="185dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="125dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
                 android:layout_marginBottom="12dp"
                 android:text="@string/btn_establecimientos_de_salud"
                 android:drawableLeft="@drawable/btn_establecimiento"
@@ -92,11 +84,102 @@
                 android:id="@+id/btnCentros"
                 android:layout_width="185dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="125dp"
+                android:layout_marginStart="115dp"
                 android:layout_marginBottom="12dp"
+                android:backgroundTint="#046571"
                 android:text="@string/btn_centros_vacunacion"
                 android:drawableLeft="@drawable/btn_centro_vacunacion"
                 android:textSize="11sp"/>
+            <Button
+                android:id="@+id/btnDoctores"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/ic_btn_doctor"
+                android:text="Doctores" />
+            <Button
+                android:id="@+id/btnEnfermeros"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/ic_btn_enfermeros"
+                android:text="@string/btn_enfermeros" />
+
+            <Button
+                android:id="@+id/btnComorbilidad"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/ic_btn_comorbilidad"
+                android:text="Comorbilidades"
+                android:textSize="10dp"/>
+
+            <Button
+                android:id="@+id/btnCiviles"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/ic_btn_civiles"
+                android:text="@string/btn_civiles" />
+
+            <Button
+                android:id="@+id/btnFabricantes"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/ic_btn_fabricante"
+                android:text="Fabricantes"
+                android:textSize="12dp"/>
+
+            <Button
+                android:id="@+id/btnVacuna"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/ic_btn_vacuna"
+                android:text="@string/btn_vacuna" />
+            <Button
+                android:id="@+id/btnUnidadVacunacion"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/ic_btn_unidad_vacunacion"
+                android:text="Unidad Vacunación" />
+
+            <Button
+                android:id="@+id/btnCarnet"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/ic_btn_carnet"
+                android:text="@string/btn_carnet" />
+
+            <Button
+                android:id="@+id/btnUsuarios"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#046571"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="12dp"
+                android:drawableLeft="@drawable/ic_btn_user"
+                android:text="@string/btn_usuarios" />
+
         </LinearLayout>
 
     </ScrollView>

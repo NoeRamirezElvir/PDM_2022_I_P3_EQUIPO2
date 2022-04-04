@@ -98,4 +98,12 @@
     <string name="title_activity_ver_municipios">VerMunicipiosActivity</string>
     <string name="title_activity_ver_establecimientos">VerEstablecimientosActivity</string>
     <string name="title_activity_ver_centro_vacunacion">VerCentroVacunacionActivity</string>
+    <string name="title_activity_registrar_comorbilidad">RegistrarComorbilidad</string>
+    <string name="title_activity_ver_comorbilidades">VerComorbilidadesActivity</string>
+    <string name="title_activity_registrar_doctor">RegistrarDoctorActivity</string>
+    <string name="title_activity_ver_doctores">VerDoctoresActivity</string>
+    <string name="title_activity_registar_fabricante">RegistarFabricanteActivity</string>
+    <string name="title_activity_ver_fabricantes">VerFabricantesActivity</string>
+    <string name="title_activity_registrar_unidad">RegistrarUnidadActivity</string>
+    <string name="title_activity_ver_unidades">VerUnidadesActivity</string>
 </resources>
