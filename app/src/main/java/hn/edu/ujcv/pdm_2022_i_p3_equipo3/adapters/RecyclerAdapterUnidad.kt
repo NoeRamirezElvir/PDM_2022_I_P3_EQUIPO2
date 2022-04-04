@@ -21,7 +21,7 @@ class RecyclerAdapterUnidad(pListaUnidad:ArrayList<UnidadVacunacion>? = null) : 
         var itemCentroVU: TextView = itemView.findViewById(R.id.itemCentroVacunacionUnidad)
         var itemDocU: TextView = itemView.findViewById(R.id.itemDoctorA)
         var itemVacunaU: TextView = itemView.findViewById(R.id.itemVacunaIyectable)
-        var itemvacunadorU: TextView = itemView.findViewById(R.id.itemVacunador)
+        var itemvacunadorU: TextView = itemView.findViewById(R.id.itemVacunadorUnidad)
         init {
             itemView.itemBtnBorrarUnidad.setOnClickListener {
                 Toast.makeText(it.context, "Eliminado Correctamente", Toast.LENGTH_LONG).show()
