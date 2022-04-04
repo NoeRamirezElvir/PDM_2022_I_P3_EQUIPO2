@@ -10,6 +10,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3">
         <activity
+            android:name=".VerUnidadesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_unidades"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarUnidadActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_unidad"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerFabricantesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_fabricantes"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistarFabricanteActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registar_fabricante"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerDoctoresActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_doctores"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarDoctorActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_doctor"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerComorbilidadesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_comorbilidades"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarComorbilidad"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_comorbilidad"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
             android:name=".VerCentroVacunacionActivity"
             android:exported="false"
             android:label="@string/title_activity_ver_centro_vacunacion"

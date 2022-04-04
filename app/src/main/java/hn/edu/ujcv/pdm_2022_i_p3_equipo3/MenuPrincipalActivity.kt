@@ -9,12 +9,24 @@ class MenuPrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_principal)
+        btnUnidadVacunacion.setOnClickListener {
+            val intent= Intent(this,VerUnidadesActivity::class.java)
+            startActivity(intent)
+        }
         btnEnfermeros.setOnClickListener {
             val intent= Intent(this,VerEnfermerosActivity::class.java)
             startActivity(intent)
         }
+        btnComorbilidad.setOnClickListener {
+            val intent= Intent(this,VerComorbilidadesActivity::class.java)
+            startActivity(intent)
+        }
         btnCiviles.setOnClickListener {
             val intent= Intent(this,VerCivilesActivity::class.java)
+            startActivity(intent)
+        }
+        btnFabricantes.setOnClickListener {
+            val intent= Intent(this,VerFabricantesActivity::class.java)
             startActivity(intent)
         }
         btnVacuna.setOnClickListener {
@@ -43,6 +55,10 @@ class MenuPrincipalActivity : AppCompatActivity() {
         }
         btnCentros.setOnClickListener {
             val intent = Intent(this, VerCentroVacunacionActivity::class.java)
+            startActivity(intent)
+        }
+        btnDoctores.setOnClickListener {
+            val intent = Intent(this, VerDoctoresActivity::class.java)
             startActivity(intent)
         }
     }
