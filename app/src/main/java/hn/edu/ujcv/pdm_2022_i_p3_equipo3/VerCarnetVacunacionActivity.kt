@@ -37,7 +37,11 @@ class VerCarnetVacunacionActivity : AppCompatActivity() {
         }
     }
     fun actualizarRecyclerView(){
-        adapter = RecyclerAdapterCarnet()
+        adapter = RecyclerAdapterCarnet(activity = this@VerCarnetVacunacionActivity)
         binding.contentCarnet.recyclerCarnet.adapter = adapter
+    }
+    fun abrirCarnetDetalles(){
+        val intent = Intent(this,VerCarnetMasDetalleActivity::class.java)
+        startActivity(intent)
     }
 }

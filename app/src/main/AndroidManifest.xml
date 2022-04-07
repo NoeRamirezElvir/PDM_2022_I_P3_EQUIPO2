@@ -10,6 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3">
         <activity
+            android:name=".RegistrarPaisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerPaisesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerCarnetMasDetalleActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerCarnetDetalleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarCarnetDetalleActivity"
+            android:exported="false" />
+        <activity
             android:name=".VerUnidadesActivity"
             android:exported="false"
             android:label="@string/title_activity_ver_unidades"

@@ -44,6 +44,60 @@
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_establecimientos.xml" value="0.14356884057971014" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_municipios.xml" value="0.14356884057971014" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_region_sanitaria.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/btn_agregar_detalle.xml" value="0.1415" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/btn_centro_vacunacion.xml" value="0.1415" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/btn_login.xml" value="0.1415" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/btn_otro.xml" value="0.1275" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/ic_establecimiento.xml" value="0.1415" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/ic_municipio.xml" value="0.1415" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/icono_centro_vac.xml" value="0.1415" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/drawable/txt_registros.xml" value="0.14" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout-v23/card_layout_paises.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_menu_principal.xml" value="0.33" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registar_fabricante.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_carnet.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_carnet_detalle.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_centro_vacunacion.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_civil.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_comorbilidad.xml" value="0.1" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_doctor.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_pais.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_unidad.xml" value="0.1" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.18" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_vacuna.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_carnet_detalle.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_carnet_mas_detalle.xml" value="0.22" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_carnet_vacunacion.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_civiles.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_paises.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_region_sanitaria.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_vacunas.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_carnet.xml" value="0.28537735849056606" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_carnet_detalle.xml" value="0.22772277227722773" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_carnet_detalle_d.xml" value="0.22" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_centro_vacunacion.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_civil.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_comorbilidad.xml" value="0.10052083333333334" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_paises.xml" value="0.5" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_region.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_vacuna.xml" value="0.4810606060606061" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/card_layout_ver_paises.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registar_fabricante.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_carnet.xml" value="0.33" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_carnet_detalle.xml" value="0.22" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_centro_vacunacion.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_civil.xml" value="0.18" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_paises.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_unidad.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_usuario.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_vacuna.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_carnet_detalle.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_carnet_mas_detalle.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_carnet_vacunacion.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_centro_vacunacion.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_civiles.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_paises.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Clases Periodo I 2022/PDM/Proyecto Final/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_ver_vacunas.xml" value="0.2" />
         <entry key="..\:/Users/nblad/Desktop/PDM_2022_I_P3_EQUIPO3/app/src/main/res/drawable-v24/btn_login.xml" value="0.104" />
         <entry key="..\:/Users/nblad/Desktop/PDM_2022_I_P3_EQUIPO3/app/src/main/res/drawable/btn_login.xml" value="0.104" />
         <entry key="..\:/Users/nblad/Desktop/PDM_2022_I_P3_EQUIPO3/app/src/main/res/drawable/btn_otro.xml" value="0.2075" />

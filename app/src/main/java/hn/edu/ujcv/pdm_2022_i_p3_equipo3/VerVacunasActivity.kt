@@ -35,8 +35,6 @@ class VerVacunasActivity : AppCompatActivity() {
             val intent= Intent(this,RegistrarVacunaActivity::class.java)
             startActivity(intent)
         }
-
-
     }
     fun actualizarRecyclerView(){
         adapter = RecyclerAdapterVacuna()

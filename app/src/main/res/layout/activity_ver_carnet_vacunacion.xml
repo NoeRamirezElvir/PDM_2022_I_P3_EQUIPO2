@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/im_login"
+    android:background="@drawable/im_fondo4"
     tools:context=".VerCarnetVacunacionActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,7 +17,7 @@
             android:id="@+id/toolbarCarnet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#D909291B"
+            android:background="#FFBB7216"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
             <EditText
@@ -27,7 +27,7 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="#3A176D47"
+                android:background="#FFBB8137"
                 android:inputType="number"
                 android:hint="@string/buscar_dni"
                 android:textAlignment="center"

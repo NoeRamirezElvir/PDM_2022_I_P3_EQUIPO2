@@ -8,33 +8,37 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.R
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.RegistrarCarnetActivity
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.VerCarnetVacunacionActivity
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.clases.CarnetVacunacion
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.clases.Civil
 import kotlinx.android.synthetic.main.card_layout_carnet.view.*
 import kotlinx.android.synthetic.main.card_layout_civil.view.*
 
-class RecyclerAdapterCarnet(pLista:ArrayList<CarnetVacunacion>? = null) : RecyclerView.Adapter<RecyclerAdapterCarnet.ViewHolder>(){
+class RecyclerAdapterCarnet(pLista:ArrayList<CarnetVacunacion>? = null, var activity:VerCarnetVacunacionActivity? = null) : RecyclerView.Adapter<RecyclerAdapterCarnet.ViewHolder>(){
     var listaCarnet:ArrayList<CarnetVacunacion>? = pLista
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-        var itemNombre:TextView = itemView.findViewById(R.id.itemNombreCivilCarnet)
-        var itemCentroSalud:TextView = itemView.findViewById(R.id.itemNombreCentroSaludCarnet)
-        var itemFecha:TextView = itemView.findViewById(R.id.itemFechaNacimientoCarnet)
-        var itemNumeroLote:TextView = itemView.findViewById(R.id.itemNumeroLoteCarnet)
-        var itemNumeroTelefono:TextView = itemView.findViewById(R.id.itemNumeroTelefonoCarnet)
-        var itemTipoVacuna:TextView = itemView.findViewById(R.id.itemVacunaCarnet)
-        var itemNombreVacunador:TextView = itemView.findViewById(R.id.itemVacunador)
-        var itemDni:TextView = itemView.findViewById(R.id.itemDniCarnet)
+        var itemNumeroC:TextView = itemView.findViewById(R.id.itemNumeroCarnet)
+        var itemNombreC:TextView = itemView.findViewById(R.id.itemNombreCivilC)
+        var itemIdC:TextView = itemView.findViewById(R.id.itemIdCarnetC)
+
         init {
+
             itemView.imbtBorrarCarnetR.setOnClickListener {
                 Toast.makeText(it.context,"Eliminado Correctamente", Toast.LENGTH_LONG).show()
             }
             itemView.imbtEditarCarnetR.setOnClickListener {
                 Toast.makeText(it.context,"Se abre el registro", Toast.LENGTH_LONG).show()
             }
+            itemView.setOnClickListener{
+                if(activity != null){
+                    activity!!.abrirCarnetDetalles()
+                }
+            }
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapterCarnet.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout_carnet,parent,false)
         return ViewHolder(v)
@@ -42,14 +46,10 @@ class RecyclerAdapterCarnet(pLista:ArrayList<CarnetVacunacion>? = null) : Recycl
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: RecyclerAdapterCarnet.ViewHolder, position: Int) {
-        holder.itemNombre.text = "Alejandra Flores "
-        holder.itemDni.text    = "DNI: 0896785999087"
-        holder.itemCentroSalud.text = "Direccion: Cis. La Joya "
-        holder.itemFecha.text = "Fecha de Nacimiento: 16/12/2000 "
-        holder.itemNumeroLote.text = "Lote: 77889 "
-        holder.itemNumeroTelefono.text = "Telefono: 22467889 "
-        holder.itemTipoVacuna.text = "Aztrazeneca"
-        holder.itemNombreVacunador.text = "Vacunador: Olvin Ramos"
+        holder.itemNumeroC.text = "No. 175466"
+        holder.itemNombreC.text    = "Paciente: Alejandra Valle"
+        holder.itemIdC.text = "ID Carnet: 1"
+
     }
 
     override fun getItemCount(): Int {

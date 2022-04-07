@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerCivilesActivity"
-    android:background="@drawable/im_login">
+    android:background="@drawable/im_fondo4"
+    tools:context=".VerCarnetVacunacionActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbarCiviles"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarCiviles"
+            android:id="@+id/toolbarCarnetDetalle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#D909291B"
+            android:background="#FFBB7216"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
             <EditText
-                android:id="@+id/txtBuscarCodigoEnfermero"
+                android:id="@+id/txtBuscarIdCarnetDetalle"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="#3A176D47"
+                android:background="#FFBB8137"
+                android:hint="@string/buscar_id_detalle"
+                android:importantForAutofill="no"
                 android:inputType="number"
-                android:hint="@string/buscar_dni"
                 android:textAlignment="center"
                 android:textColorHint="@color/white"
-                android:importantForAutofill="no" />
+                tools:ignore="TextContrastCheck" />
 
             <ImageButton
-                android:id="@+id/imbtBuscarEnfermero"
+                android:id="@+id/imbtBuscarDetalle"
                 android:layout_width="50dp"
                 android:layout_height="70dp"
                 android:background="@null"
@@ -46,18 +47,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
-        android:id="@+id/contentCiviles"
-        layout="@layout/content_ver_civiles" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:layout_anchor="@id/contentCiviles"
-        app:layout_anchorGravity="end|bottom"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:ignore="SpeakableTextPresentCheck" />
-
+        android:id="@+id/contentCarnetDetalle"
+        layout="@layout/content_ver_carnet_detalle"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -7,91 +7,96 @@
     android:background="@drawable/im_fondo4"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <Button
-        android:id="@+id/btnActualizarEnfermero"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/btn_otro"
-        android:text="@string/actualizar_enfermero"
-        android:textColor="@color/black"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/txt_registros"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumeroCarnet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPacienteCarnet"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/txtIdEnfermero"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/txt_registros"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/id_txtre"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroCarnet" />
+
+    <EditText
+        android:id="@+id/txtNumeroCarnet"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/txt_registros"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/numero_de_carnet"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtIdEnfermero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
 
     <Button
         android:id="@+id/btnRegistrarEnfermero"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="65dp"
         android:background="@drawable/btn_otro"
         android:text="@string/registrar_enfermero"
         android:textColor="@color/black"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/btnActualizarEnfermero"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnActualizarEnfermero"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="193dp"
-        android:layout_height="149dp"
-        android:layout_marginTop="12dp"
+    <TextView
+        android:id="@+id/txtPacienteCarnet"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:text="Paciente"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/im_carnet" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="441dp"
-        android:layout_height="346dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarEnfermero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638">
-
-        <EditText
-            android:id="@+id/txtIdEnfermero"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="150dp"
-            android:background="@drawable/txt_registros"
-            android:clickable="true"
-            android:ems="10"
-            android:focusable="true"
-            android:hint="@string/id_txtre"
-            android:importantForAutofill="no"
-            android:inputType="number"
-            android:textAlignment="center"
-            android:textColorHint="@color/black" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/txtPacienteCarnet"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="25dp"
-                android:text="Paciente"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/spinner3"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/txt_registros"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/txtIdEnfermero">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,74 +105,48 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="25dp"
-                android:text="Vacunador"
+                android:layout_marginStart="150dp"
+                android:text="@string/detalles_carnet"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <Spinner
-                android:id="@+id/spinner4"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/txt_registros"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="99dp"
+            <Button
+                android:id="@+id/btnAgregarDetalle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="25dp"
-                android:text="Vacuna"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/spinner5"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/txt_registros"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:layout_marginStart="60dp"
+                android:background="@drawable/btn_otro"
+                android:text="Agregar"
+                app:backgroundTint="@null" />
         </LinearLayout>
 
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/scrollView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="15dp"
-                android:text="Centro de Salud"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/spinner6"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/txt_registros"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDetallesC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnActualizarEnfermero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/btn_otro"
+        android:text="@string/actualizar_enfermero"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRegistrarEnfermero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistrarEnfermero" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,24 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerCivilesActivity"
+    tools:context=".VerPaisesActivity"
     android:background="@drawable/im_login">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbarCiviles"
+        android:id="@+id/appbarPaises"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarCiviles"
+            android:id="@+id/toolbarVerPaises"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#D909291B"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
             <EditText
-                android:id="@+id/txtBuscarCodigoEnfermero"
+                android:id="@+id/txtBuscarPais"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="45dp"
@@ -29,35 +29,32 @@
                 android:layout_marginBottom="5dp"
                 android:background="#3A176D47"
                 android:inputType="number"
-                android:hint="@string/buscar_dni"
                 android:textAlignment="center"
+                android:hint="ID Pais"
+                android:textSize="16sp"
                 android:textColorHint="@color/white"
                 android:importantForAutofill="no" />
 
             <ImageButton
-                android:id="@+id/imbtBuscarEnfermero"
+                android:id="@+id/btnBuscarPais"
                 android:layout_width="50dp"
                 android:layout_height="70dp"
                 android:background="@null"
-                android:contentDescription="@string/btn_enfermerosR"
                 android:src="@drawable/ic_buscar" />
         </androidx.appcompat.widget.Toolbar>
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
-        android:id="@+id/contentCiviles"
-        layout="@layout/content_ver_civiles" />
+        android:id="@+id/contentPaises"
+        layout="@layout/content_ver_paises" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:layout_anchor="@id/contentCiviles"
-        app:layout_anchorGravity="end|bottom"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

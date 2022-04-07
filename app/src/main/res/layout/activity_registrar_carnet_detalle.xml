@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrarUsuarioActivity">
+    tools:context=".RegistrarCarnetDetalleActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarRegistroUsuario"
+            android:id="@+id/toolbarRegistroCarnetDetalle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFBB8137"
@@ -22,10 +22,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="REGISTRO DE USUARIOS"
-            app:titleMarginStart="90dp" />
+            app:title="CARNET DETALLES"
+            app:titleMarginStart="120dp"
+            app:titleTextColor="@color/white" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_registrar_usuario" />
+    <include
+        android:id="@+id/contentCarnetDetalle"
+        layout="@layout/content_registrar_carnet_detalle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

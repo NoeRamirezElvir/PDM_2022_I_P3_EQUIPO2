@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_paises"
+    android:layout_margin="5dp"
+    android:foreground="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="#FF8DDDBB"
+    app:cardCornerRadius="7dp" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayoutPaises"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/itemNombrePais"
+            android:layout_width="150dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/id_nombre_pais"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemCodigoIsoP" />
+
+        <TextView
+            android:id="@+id/itemIdPais"
+            android:layout_width="150dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/id_paises"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/itemNombrePais"
+            app:layout_constraintEnd_toEndOf="@+id/itemCodigoIsoP"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/itemNombrePais"
+            app:layout_constraintTop_toBottomOf="@+id/itemCodigoIsoP"
+            app:layout_constraintVertical_bias="0.923" />
+
+        <TextView
+            android:id="@+id/itemCodigoAreaPais"
+            android:layout_width="308dp"
+            android:layout_height="25dp"
+            android:text="@string/id_codigo_de_area"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/itemIdPais"
+            app:layout_constraintStart_toStartOf="@+id/itemNombrePais" />
+
+        <TextView
+            android:id="@+id/itemCodigoIsoP"
+            android:layout_width="298dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="40dp"
+            android:background="#FF22A36C"
+            android:text="@string/codigo_iso_P"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/itemCodigoAreaPais"
+            app:layout_constraintEnd_toStartOf="@+id/imbtEditarPais"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/itemNombrePais"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/imbtBorrarPais"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#FF22A36C"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_borrar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/itemNombrePais"
+            app:layout_constraintTop_toBottomOf="@+id/imbtEditarPais"
+            tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/imbtEditarPais"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FF22A36C"
+            android:contentDescription="@string/btn_editar_enfermeror"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_actualizar"
+            app:layout_constraintEnd_toEndOf="@+id/imbtBorrarPais"
+            app:layout_constraintStart_toStartOf="@+id/imbtBorrarPais"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

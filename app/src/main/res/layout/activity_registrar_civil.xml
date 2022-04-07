@@ -14,7 +14,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarRegistroCiviles"
             android:layout_width="411dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:background="#FFBB8137"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
@@ -28,6 +28,15 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_registrar_civil" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
+
+        <include
+            layout="@layout/content_registrar_civil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
