@@ -37,7 +37,7 @@ class RecyclerAdapterCivil(pLista:ArrayList<Civil>? = null) : RecyclerView.Adapt
     }
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: RecyclerAdapterCivil.ViewHolder, position: Int) {
-        holder.itemImage.setImageResource(R.drawable.ic_no_image)
+        holder.itemImage.setImageResource(R.drawable.ic_man)
         holder.itemNombre.text = "Carlos Godoy"
         holder.itemDni.text = "0802200204856"
         holder.itemFecha.text = "15/11/2001"

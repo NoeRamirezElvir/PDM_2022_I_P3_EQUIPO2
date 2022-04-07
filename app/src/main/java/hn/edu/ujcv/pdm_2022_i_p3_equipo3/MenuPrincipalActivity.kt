@@ -61,5 +61,9 @@ class MenuPrincipalActivity : AppCompatActivity() {
             val intent = Intent(this, VerDoctoresActivity::class.java)
             startActivity(intent)
         }
+        btnPaises.setOnClickListener{
+            val intent = Intent(this, VerPaisesActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -13,7 +13,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarRegistroCarnet"
-            android:layout_width="411dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFBB8137"
             android:minHeight="?attr/actionBarSize"
@@ -28,6 +28,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_registrar_carnet" />
+    <include android:id="@+id/contentDetalles"
+        layout="@layout/content_registrar_carnet"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

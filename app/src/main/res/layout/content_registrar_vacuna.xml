@@ -172,6 +172,26 @@
                 android:textColorHint="@color/black"
                 tools:ignore="Deprecated" />
 
+            <EditText
+                android:id="@+id/txtFechaLlegadaVacuna"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="46dp"
+                android:layout_marginEnd="46dp"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/txt_registros"
+                android:clickable="false"
+                android:drawableLeft="@drawable/ic_fecha"
+                android:editable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="@string/fecha_llegada_vacuna"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColorHint="@color/black"
+                tools:ignore="Deprecated" />
+
         </LinearLayout>
     </ScrollView>
 

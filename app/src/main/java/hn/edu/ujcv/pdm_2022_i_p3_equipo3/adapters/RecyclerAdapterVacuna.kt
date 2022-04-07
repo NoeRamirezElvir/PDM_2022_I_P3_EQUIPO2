@@ -19,7 +19,7 @@ class RecyclerAdapterVacuna(pLista:ArrayList<Civil>? = null) : RecyclerView.Adap
         var itemImage:ImageView = itemView.findViewById(R.id.itemImageVacuna)
         var itemNombre:TextView = itemView.findViewById(R.id.itemNombreVacuna)
         var itemFabricante:TextView = itemView.findViewById(R.id.itemFabricanteVacuna)
-        var itemFechaF:TextView = itemView.findViewById(R.id.itemFechaFabricacionVacuna)
+        var itemFechaL:TextView = itemView.findViewById(R.id.itemFechaLlegadaVacuna)
         var itemFechaV:TextView = itemView.findViewById(R.id.itemFechaVencimientoVacuna)
         var itemNumeroLote:TextView = itemView.findViewById(R.id.itemNumeroLoteVacuna)
 
@@ -38,12 +38,12 @@ class RecyclerAdapterVacuna(pLista:ArrayList<Civil>? = null) : RecyclerView.Adap
     }
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: RecyclerAdapterVacuna.ViewHolder, position: Int) {
-        holder.itemImage.setImageResource(R.drawable.ic_no_image)
+        holder.itemImage.setImageResource(R.drawable.ic_vacuna_r)
         holder.itemNombre.text = "Pfizer"
         holder.itemFabricante.text = "BioNTech, Fosun Pharma, Pfizer"
         holder.itemNumeroLote.text = "77803"
-        holder.itemFechaF.text     = "12/10/2021"
-        holder.itemFechaV.text     = "12/10/2023"
+        holder.itemFechaL.text     = "Llegada: 15/10/2021"
+        holder.itemFechaV.text     = "Vencimiento: 12/10/2023"
     }
     override fun getItemCount(): Int {
         return 1

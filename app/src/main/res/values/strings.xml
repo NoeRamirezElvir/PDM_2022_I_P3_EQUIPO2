@@ -106,4 +106,36 @@
     <string name="title_activity_ver_fabricantes">VerFabricantesActivity</string>
     <string name="title_activity_registrar_unidad">RegistrarUnidadActivity</string>
     <string name="title_activity_ver_unidades">VerUnidadesActivity</string>
+    <string name="detalles_carnet">Detalles</string>
+    <string name="numero_de_carnet">Numero de Carnet</string>
+    <string name="id_nombre_carnet">Nombre Paciente</string>
+    <string name="id_carnet_carnet">ID Carnet</string>
+    <string name="id_carnet_detalle_detalle">ID Carnet Detalle</string>
+    <string name="id_unidad_detalle">ID Unidad</string>
+    <string name="fecha_detalle">Fecha</string>
+    <string name="dosis_de_vacuna_detalle">Dosis de Vacuna</string>
+    <string name="nombre_empleado_vacunador_detalle">Nombre Empleado Vacunador</string>
+    <string name="observacion_detalle">Observacion</string>
+    <string name="buscar_id_detalle">ID</string>
+    <string name="id_carnet_detalle_d">ID Carnet Detalle</string>
+    <string name="id_carnet">ID Carnet</string>
+    <string name="id_unidad_de_vacunacion">ID Unidad de Vacunacion</string>
+    <string name="numero_de_dosis">Numero de Dosis</string>
+    <string name="id_vacunador">ID Vacunador</string>
+    <string name="observaciones_detalle">Observaciones</string>
+    <string name="registrar_detalle_btn">Registrar</string>
+    <string name="ver_lista_detalle_btn">Ver Lista</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="carnet_titulo">Carnet</string>
+    <string name="fecha_llegada_vacuna">Fecha de Llegada</string>
+    <string name="id_nombre_pais">Nombre: Pais</string>
+    <string name="id_paises">ID: Pais</string>
+    <string name="id_codigo_de_area">Codigo de Area</string>
+    <string name="codigo_iso_P">Codigo ISO</string>
+    <string name="codigo_de_area">Codigo de Area</string>
+    <string name="nombre_del_pais">Nombre del Pais</string>
+    <string name="codigo_iso">Codigo ISO</string>
+    <string name="id_pais">ID Pais</string>
+    <string name="btn_paises">Paises</string>
 </resources>

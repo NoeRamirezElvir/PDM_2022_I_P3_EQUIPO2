@@ -16,6 +16,8 @@ import kotlinx.android.synthetic.main.content_registrar_vacuna.*
 import java.text.SimpleDateFormat
 import java.util.*
 import android.R
+import android.widget.EditText
+import android.widget.TextView
 
 class RegistrarVacunaActivity : AppCompatActivity() {
     private val formatDate = SimpleDateFormat("dd - MM - yyyy",Locale.US)
@@ -28,42 +30,25 @@ class RegistrarVacunaActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbarRegistroVacuna)
         //-----------------------------------------
-        datePickerMetodo()
+        //datePickerMetodo()
+        datePicker(txtFechaFabricacion)
+        datePicker(txtFechaVencimientoVacuna)
+        datePicker(txtFechaLlegadaVacuna)
     }
-    private fun datePickerMetodo(){
-        txtFechaFabricacion.setOnClickListener(View.OnClickListener {
+    private fun datePicker(control:EditText){
+        control.setOnClickListener(View.OnClickListener {
             val getDate: Calendar = Calendar.getInstance()
             val datePicker = DatePickerDialog(this,
                 R.style.Theme_Holo_Light_Dialog_MinWidth,
                 DatePickerDialog.OnDateSetListener { _, i, i2, i3 ->
-
-                val selectedDate = Calendar.getInstance()
-                selectedDate.set(Calendar.YEAR,i)
-                selectedDate.set(Calendar.MONTH,i2)
-                selectedDate.set(Calendar.DAY_OF_MONTH,i3)
-                val date = formatDate.format(selectedDate.time)
-                    txtFechaFabricacion.setText(date)
-
-            },getDate.get(Calendar.YEAR),getDate.get(Calendar.MONTH),getDate.get(Calendar.DAY_OF_MONTH))
-            datePicker.show()
-
-        })
-        txtFechaVencimientoVacuna.setOnClickListener(View.OnClickListener {
-            val getDate: Calendar = Calendar.getInstance()
-            val datePicker = DatePickerDialog(this,
-                R.style.Theme_Holo_Light_Dialog_MinWidth,
-                DatePickerDialog.OnDateSetListener { _, i, i2, i3 ->
-
                     val selectedDate = Calendar.getInstance()
                     selectedDate.set(Calendar.YEAR,i)
                     selectedDate.set(Calendar.MONTH,i2)
                     selectedDate.set(Calendar.DAY_OF_MONTH,i3)
                     val date = formatDate.format(selectedDate.time)
-                    txtFechaVencimientoVacuna.setText(date)
-
+                    control.setText(date)
                 },getDate.get(Calendar.YEAR),getDate.get(Calendar.MONTH),getDate.get(Calendar.DAY_OF_MONTH))
             datePicker.show()
-
         })
     }
 
