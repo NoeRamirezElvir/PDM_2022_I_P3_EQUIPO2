@@ -10,7 +10,7 @@
 
 
     <Button
-        android:id="@+id/btnRegistrarFabricante"
+        android:id="@+id/btnRegistrarCivilComorb"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollFabricante" />
 
     <Button
-        android:id="@+id/btnActualizarFabricante"
+        android:id="@+id/btnActualizarCivilComorb"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_login"
@@ -32,7 +32,7 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRegistrarFabricante"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistrarCivilComorb"
         app:layout_constraintTop_toBottomOf="@+id/scrollFabricante" />
 
     <ImageView
@@ -46,7 +46,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_fabricante" />
+        app:srcCompat="@drawable/img_civilcomorb" />
 
     <ScrollView
         android:id="@+id/scrollFabricante"
@@ -65,7 +65,7 @@
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txlIdFabricante"
+                android:id="@+id/txlIdCivilComorb"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="300dp"
                 android:layout_height="62dp"
@@ -85,7 +85,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtIdFabricante"
+                    android:id="@+id/txtIdCivilComorb"
                     android:background="@drawable/txt_registros"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
@@ -98,58 +98,46 @@
                     android:minHeight="48dp"
                     tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txlNombreLab"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="300dp"
-                android:layout_height="62dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="17dp"
-                app:hintTextColor="@color/black"
-                android:textAlignment="center"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black"
-                app:errorEnabled="true"
-                android:textColorHint="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTop"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtNombreLab"
-                    android:background="@drawable/txt_registros"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Nombre Laboratorio"
-                    android:textColorHint="@color/black"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:id="@+id/txvIdCivil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:text="Paciente:"
                     android:textColor="@color/black"
-                    android:importantForAutofill="no"
-                    android:inputType="text"
-                    android:maxLength="50"
-                    android:minHeight="48dp"
-                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:textSize="16dp"
+                    android:layout_marginStart="60dp"/>
+                <Spinner
+                    android:id="@+id/spnCivil"
+                    android:layout_width="253dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/txt_registros"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTop"
+                    />
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
                 <TextView
-                    android:id="@+id/txvPais"
+                    android:id="@+id/txvIdComorbilidad"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
-                    android:text="País:"
+                    android:text="Comorbilidad:"
                     android:textColor="@color/black"
                     android:textSize="16dp"
-                    android:layout_marginStart="60dp"/>
+                    android:layout_marginStart="25dp"/>
                 <Spinner
-                    android:id="@+id/spnPais"
+                    android:id="@+id/spnComorbilidad"
                     android:layout_width="253dp"
-                    android:layout_height="62dp"
+                    android:layout_height="55dp"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/txt_registros"
                     app:layout_constraintTop_toBottomOf="@+id/tvTop"
@@ -158,73 +146,74 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txlNombreContacto"
+                android:id="@+id/txlEstado"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="300dp"
-                android:layout_height="62dp"
+                android:layout_width="326dp"
+                android:layout_height="57dp"
                 android:layout_marginStart="60dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="17dp"
-                app:hintTextColor="@color/black"
                 android:textAlignment="center"
+                android:textColorHint="@color/black"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/black"
                 app:errorEnabled="true"
-                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTop"
-                >
+                app:layout_constraintTop_toBottomOf="@+id/tvTop">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtNombreContacto"
-                    android:background="@drawable/txt_registros"
+                    android:id="@+id/txtEstado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nombre de Contacto"
-                    android:textColorHint="@color/black"
-                    android:textColor="@color/black"
+                    android:background="@drawable/txt_registros"
+                    android:hint="Estado"
                     android:importantForAutofill="no"
                     android:inputType="text"
                     android:maxLength="50"
                     android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txlTelContacto"
+                android:id="@+id/txlObservacion"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="300dp"
-                android:layout_height="62dp"
+                android:layout_width="327dp"
+                android:layout_height="64dp"
                 android:layout_marginStart="60dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginBottom="17dp"
-                app:hintTextColor="@color/black"
                 android:textAlignment="center"
+                android:textColorHint="@color/black"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/black"
                 app:errorEnabled="true"
-                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTop"
-                >
+                app:layout_constraintTop_toBottomOf="@+id/tvTop">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtTelContacto"
-                    android:background="@drawable/txt_registros"
+                    android:id="@+id/txtObservacion"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Telefono de Contacto"
-                    android:textColorHint="@color/black"
-                    android:textColor="@color/black"
+                    android:layout_height="46dp"
+                    android:background="@drawable/txt_registros"
+                    android:hint="Observacion"
                     android:importantForAutofill="no"
-                    android:inputType="number"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
+
 
         </LinearLayout>
 

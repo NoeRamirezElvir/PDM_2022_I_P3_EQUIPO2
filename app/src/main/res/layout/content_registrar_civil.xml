@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/im_fondo4"
+    android:background="@drawable/im_fondo3"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <EditText
@@ -37,13 +37,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="41dp"
         android:layout_marginEnd="38dp"
-        android:background="@drawable/btn_otro"
+        android:background="@drawable/btn_login"
         android:text="@string/registrar_enfermero"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnActualizarEnfermero"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnActualizarEnfermero"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextContrastCheck" />
 
     <EditText
@@ -72,7 +74,9 @@
         android:id="@+id/txtDniCivil"
         android:layout_width="290dp"
         android:layout_height="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="54dp"
+        app:endIconMode="clear_text"
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/txt_registros"
@@ -86,7 +90,7 @@
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/txtNombreCivil"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imvCivil" />
 
@@ -129,31 +133,30 @@
         android:id="@+id/imvCivil"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="394dp"
         android:contentDescription="@string/imagen_galeria"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/btnActualizarEnfermero"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spnSexoCivil"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.833"
+        app:layout_constraintVertical_bias="0.09"
         app:srcCompat="@drawable/ic_man" />
 
     <Button
         android:id="@+id/btnActualizarEnfermero"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="552dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/btn_otro"
+        android:background="@drawable/btn_login"
         android:text="@string/actualizar_enfermero"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnRegistrarEnfermero"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947" />
 
     <EditText
         android:id="@+id/txtIdCivil"

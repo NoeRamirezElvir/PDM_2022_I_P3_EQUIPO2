@@ -6,32 +6,32 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters.RecyclerAdapterEnfermero
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.databinding.ActivityVerEnfermerosBinding
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters.RecyclerAdapterEmpleado
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.databinding.ActivityVerEmpleadoBinding
 
-class VerEnfermerosActivity : AppCompatActivity() {
+class VerEmpleadosActivity : AppCompatActivity() {
     private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<RecyclerAdapterEnfermero.ViewHolder>? = null
+    private var adapter: RecyclerView.Adapter<RecyclerAdapterEmpleado.ViewHolder>? = null
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityVerEnfermerosBinding
+    private lateinit var binding: ActivityVerEmpleadoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityVerEnfermerosBinding.inflate(layoutInflater)
+        binding = ActivityVerEmpleadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbarEnfermero)
+        setSupportActionBar(binding.toolbarEmpleado)
         //-----------------------------------------------
         layoutManager = LinearLayoutManager(this)
-        binding.contentEnfermeros.recyclerEnfermeros.layoutManager = layoutManager
+        binding.contentEmpleado.recyclerEmpleado.layoutManager = layoutManager
         actualizarRecyclerView()
         //fab
         binding.fab.setOnClickListener {
-            val intent= Intent(this,RegistrarEnfermeroActivity::class.java)
+            val intent= Intent(this,RegistrarEmpleadosActivity::class.java)
             startActivity(intent)
         }
     }
     fun actualizarRecyclerView(){
-        adapter = RecyclerAdapterEnfermero()
-        binding.contentEnfermeros.recyclerEnfermeros.adapter = adapter
+        adapter = RecyclerAdapterEmpleado()
+        binding.contentEmpleado.recyclerEmpleado.adapter = adapter
     }
 }

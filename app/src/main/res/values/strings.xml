@@ -138,4 +138,7 @@
     <string name="codigo_iso">Codigo ISO</string>
     <string name="id_pais">ID Pais</string>
     <string name="btn_paises">Paises</string>
+    <string name="title_activity_registar_civil_comorbilidad">RegistarCivilComorbilidadActivity
+    </string>
+    <string name="title_activity_ver_civil_comorbilidad">VerCivilComorbilidadActivity</string>
 </resources>

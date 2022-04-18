@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3">
         <activity
+            android:name=".VerCivilComorbilidadActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_civil_comorbilidad"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistarCivilComorbilidadActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registar_civil_comorbilidad"
+            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
+        <activity
             android:name=".RegistrarPaisActivity"
             android:exported="false" />
         <activity
@@ -46,12 +56,12 @@
             android:label="@string/title_activity_registar_fabricante"
             android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
         <activity
-            android:name=".VerDoctoresActivity"
+            android:name=".VerCargosActivity"
             android:exported="false"
             android:label="@string/title_activity_ver_doctores"
             android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
         <activity
-            android:name=".RegistrarDoctorActivity"
+            android:name=".RegistrarCargoActivity"
             android:exported="false"
             android:label="@string/title_activity_registrar_doctor"
             android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
@@ -145,12 +155,12 @@
             android:label="@string/title_activity_ver_civiles"
             android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
         <activity
-            android:name=".RegistrarEnfermeroActivity"
+            android:name=".RegistrarEmpleadosActivity"
             android:exported="false"
             android:label="@string/title_activity_registrar_enfermero"
             android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
         <activity
-            android:name=".VerEnfermerosActivity"
+            android:name=".VerEmpleadosActivity"
             android:exported="false"
             android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
         <activity

@@ -2,18 +2,12 @@ package hn.edu.ujcv.pdm_2022_i_p3_equipo3
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters.RecyclerAdapterEnfermero
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters.RecyclerAdapterVacuna
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.databinding.ActivityVerVacunasBinding
-import kotlinx.android.synthetic.main.activity_ver_civiles.*
 
 class VerVacunasActivity : AppCompatActivity() {
     private var layoutManager: RecyclerView.LayoutManager? = null

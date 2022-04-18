@@ -10,37 +10,38 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters.RecyclerAdapterCivilComorbilidad
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters.RecyclerAdapterComorbilidad
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters.RecyclerAdapterDoctor
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.databinding.ActivityVerDoctoresBinding
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.databinding.ActivityVerCivilComorbilidadBinding
 
-class VerDoctoresActivity : AppCompatActivity() {
+class VerCivilComorbilidadActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityVerDoctoresBinding
+    private lateinit var binding: ActivityVerCivilComorbilidadBinding
     private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<RecyclerAdapterDoctor.ViewHolder>? = null
+    private var adapter: RecyclerView.Adapter<RecyclerAdapterCivilComorbilidad.ViewHolder>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityVerDoctoresBinding.inflate(layoutInflater)
+        binding = ActivityVerCivilComorbilidadBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbarVerDoctores)
+        setSupportActionBar(binding.toolbarVerCivilComorb)
 
         layoutManager = LinearLayoutManager(this)
-        binding.contentDoctores.recyclerViewDoctores.layoutManager = layoutManager
+        binding.contentCivilComorb.recyclerViewCivilComorbilidad.layoutManager = layoutManager
         actualizarRecyclerView()
 
-        binding.fabDoctores.setOnClickListener { view ->
-            val intent = Intent(this, RegistrarDoctorActivity::class.java)
+        binding.fabCivComorb.setOnClickListener { view ->
+            val intent = Intent(this, RegistarCivilComorbilidadActivity::class.java)
             startActivity(intent)
         }
     }
-
     fun actualizarRecyclerView() {
-        adapter = RecyclerAdapterDoctor()
-        binding.contentDoctores.recyclerViewDoctores.adapter = adapter
+        adapter = RecyclerAdapterCivilComorbilidad()
+        binding.contentCivilComorb.recyclerViewCivilComorbilidad.adapter = adapter
     }
+
+
 }

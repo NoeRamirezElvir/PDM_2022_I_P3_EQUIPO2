@@ -19,9 +19,8 @@ class RecyclerAdapterUnidad(pListaUnidad:ArrayList<UnidadVacunacion>? = null) : 
         var itemImagen: ImageView = itemView.findViewById(R.id.itemImagenUnidad)
         var itemIdUV: TextView = itemView.findViewById(R.id.itemIdUnidad)
         var itemCentroVU: TextView = itemView.findViewById(R.id.itemCentroVacunacionUnidad)
-        var itemDocU: TextView = itemView.findViewById(R.id.itemDoctorA)
         var itemVacunaU: TextView = itemView.findViewById(R.id.itemVacunaIyectable)
-        var itemvacunadorU: TextView = itemView.findViewById(R.id.itemVacunadorUnidad)
+        var itemTipoU: TextView = itemView.findViewById(R.id.itemTipoUnidad)
         init {
             itemView.itemBtnBorrarUnidad.setOnClickListener {
                 Toast.makeText(it.context, "Eliminado Correctamente", Toast.LENGTH_LONG).show()
@@ -47,9 +46,8 @@ class RecyclerAdapterUnidad(pListaUnidad:ArrayList<UnidadVacunacion>? = null) : 
         holder.itemImagen.setImageResource(R.drawable.img_cd_unidad_vacunacion)
         holder.itemIdUV.text = "Unidad: 1"
         holder.itemCentroVU.text = "Cis. San Miguel"
-        holder.itemDocU.text = "Doctor Asignado: Julio Flores"
         holder.itemVacunaU.text = "Vacuna sumistrada: Sputnik"
-        holder.itemvacunadorU.text = "Vacunador: Miguel Fonseca"
+        holder.itemTipoU.text = "Preferencial"
     }
 
     override fun getItemCount(): Int {

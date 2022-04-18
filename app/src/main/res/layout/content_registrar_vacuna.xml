@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/im_fondo4"
+    android:background="@drawable/im_fondo3"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <Button
@@ -12,9 +12,9 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:background="@drawable/btn_otro"
+        android:background="@drawable/btn_login"
         android:text="@string/registrar_enfermero"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,9 +24,9 @@
         android:id="@+id/btnActualizarVacuna"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/btn_otro"
+        android:background="@drawable/btn_login"
         android:text="@string/actualizar_enfermero"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
 
             <EditText
                 android:id="@+id/txtIdVacuna"
-                android:layout_width="300dp"
+                android:layout_width="130dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="43dp"
                 android:layout_marginEnd="43dp"
@@ -78,29 +78,37 @@
                 android:textAlignment="center"
                 android:textColorHint="@color/black" />
 
-            <EditText
-                android:id="@+id/txtFabricanteVacuna"
-                android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="46dp"
-                android:layout_marginEnd="46dp"
-                android:layout_marginBottom="17dp"
-                android:background="@drawable/txt_registros"
-                android:clickable="true"
-                android:drawableLeft="@drawable/ic_fabricante"
-                android:ems="10"
-                android:focusable="true"
-                android:hint="@string/nombre_del_fabricante_vacuna"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textAlignment="center"
-                android:textColorHint="@color/black" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txvFabricante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Fabricante:"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spnFabricante"
+                    android:layout_width="210dp"
+                    android:layout_height="62dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/txt_registros"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTop" />
+            </LinearLayout>
 
             <EditText
                 android:id="@+id/txtNombreVacuna"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="46dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="46dp"
                 android:layout_marginBottom="17dp"
                 android:background="@drawable/txt_registros"

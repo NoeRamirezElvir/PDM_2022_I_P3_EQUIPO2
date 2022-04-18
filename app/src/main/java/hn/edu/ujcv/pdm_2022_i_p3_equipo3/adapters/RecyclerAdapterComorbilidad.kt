@@ -22,7 +22,6 @@ class RecyclerAdapterComorbilidad(pListaComorbs:ArrayList<Comorbilidad>? = null)
         var itemIdComorb: TextView = itemView.findViewById(R.id.itemIdComorbilidad)
         var itemNombreo: TextView = itemView.findViewById(R.id.itemNombreComorbilidad)
         var itemTipo: TextView = itemView.findViewById(R.id.itemTipoComorbilidad)
-        var itemObservacones: TextView = itemView.findViewById(R.id.itemObservaciones)
 
         init {
             itemView.itemBtnBorrarComorb.setOnClickListener {
@@ -51,7 +50,6 @@ class RecyclerAdapterComorbilidad(pListaComorbs:ArrayList<Comorbilidad>? = null)
         holder.itemIdComorb.text = "Comorbilidad No.08"
         holder.itemNombreo.text = "Hipertensión Arterial"
         holder.itemTipo.text = "Medica Crónica"
-        holder.itemObservacones.text = "Riesgo Moderada Grave"
     }
 
     override fun getItemCount(): Int {
