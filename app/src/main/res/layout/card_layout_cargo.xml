@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/card_view_comorbilidad"
+    android:id="@+id/card_view_Cargo"
     android:layout_margin="5dp"
     app:cardBackgroundColor="#FF8DDDBB"
     app:cardCornerRadius="7dp"
@@ -14,59 +14,59 @@
     android:focusable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/relativeLayoutRegion"
+        android:id="@+id/relativeLayoutCargo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
         <ImageView
-            android:id="@+id/itemImagenComorb"
+            android:id="@+id/itemImagenCargo"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="15dp"
-            android:src="@drawable/img_cd_comorbilidad"
+            android:src="@drawable/ic_no_image"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
         <TextView
-            android:id="@+id/itemIdComorbilidad"
+            android:id="@+id/itemIdCargo"
             android:layout_width="234dp"
             android:layout_height="32dp"
             android:layout_marginStart="16dp"
-            android:text="ID Comorbilidad"
+            android:text="ID Cargo"
             android:textSize="18sp"
             android:textColor="@color/black"
-            app:layout_constraintLeft_toRightOf="@+id/itemImagenComorb"
-            app:layout_constraintStart_toEndOf="@id/itemImagenComorb"
+            app:layout_constraintLeft_toRightOf="@+id/itemImagenCargo"
+            app:layout_constraintStart_toEndOf="@id/itemImagenCargo"
             app:layout_constraintTop_toTopOf="parent"
             />
         <TextView
-            android:id="@+id/itemNombreComorbilidad"
+            android:id="@+id/itemNombreCargo"
             android:layout_width="234dp"
             android:layout_height="18dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="40dp"
-            android:text="Nombre Comorbilidad "
+            android:text="Nombre cargo "
             android:textColor="@color/black"
-            app:layout_constraintLeft_toRightOf="@+id/itemImagenComorb"
-            app:layout_constraintTop_toBottomOf="@+id/itemIdComorbilidad"
+            app:layout_constraintLeft_toRightOf="@+id/itemImagenCargo"
+            app:layout_constraintTop_toBottomOf="@+id/itemIdCargo"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            tools:ignore="UnknownId" />
         <TextView
-            android:id="@+id/itemTipoComorbilidad"
+            android:id="@+id/itemDescripcionCargo"
             android:layout_width="234dp"
             android:layout_height="18dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="68dp"
-            android:text="Tipo Comorbilidad"
+            android:text="Descripcion"
             android:textColor="@color/black"
-            app:layout_constraintLeft_toRightOf="@+id/itemImagenComorb"
-            app:layout_constraintTop_toBottomOf="@+id/itemNombreComorbilidad"
+            app:layout_constraintLeft_toRightOf="@+id/itemImagenCargo"
+            app:layout_constraintTop_toBottomOf="@+id/itemNombreCargo"
             app:layout_constraintTop_toTopOf="parent"
             />
 
         <ImageButton
-            android:id="@+id/itemBtnEditarComorb"
+            android:id="@+id/itemBtnEditarCargo"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginTop="0dp"
@@ -79,10 +79,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/itemBtnBorrarComorb"
+            android:id="@+id/itemBtnBorrarCargo"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="45dp"
             android:backgroundTint="#FF22A36C"
             android:scaleType="fitXY"
             android:src="@drawable/ic_borrar"

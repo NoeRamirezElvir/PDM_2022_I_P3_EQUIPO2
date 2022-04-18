@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_view_enfermero"
+    android:id="@+id/card_view_empleado"
     android:layout_margin="5dp"
     android:foreground="?selectableItemBackground"
     android:clickable="true"
@@ -14,11 +14,11 @@
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/relativeLayoutEnfermero"
+        android:id="@+id/relativeLayoutEmpleado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/imbtBorrarEnfermeroR"
-        app:layout_constraintTop_toTopOf="@+id/imbtBorrarEnfermeroR">
+        app:layout_constraintBottom_toTopOf="@+id/imbtBorrarEmpleado"
+        app:layout_constraintTop_toTopOf="@+id/imbtBorrarEmpleado">
 
         <ImageView
             android:id="@+id/itemImageEnfermero"
@@ -98,7 +98,7 @@
             app:layout_constraintTop_toBottomOf="@id/itemCodigo" />
 
         <ImageButton
-            android:id="@+id/imbtBorrarEnfermeroR"
+            android:id="@+id/imbtBorrarEmpleado"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="16dp"
@@ -111,7 +111,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageButton
-            android:id="@+id/imbtEditarEnfermeroR"
+            android:id="@+id/imbtEditarEmpleado"
             android:layout_width="50dp"
             android:layout_height="0dp"
             android:layout_marginTop="7dp"

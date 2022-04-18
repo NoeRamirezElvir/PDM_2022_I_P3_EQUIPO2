@@ -64,6 +64,7 @@
 
                 <Button
                     android:id="@+id/btnMunicipio"
+                    android:layout_marginTop="8dp"
                     android:layout_width="185dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
@@ -107,24 +108,24 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnEnfermeros"
+                    android:id="@+id/btnEmpleados"
                     android:layout_width="185dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginBottom="12dp"
                     android:backgroundTint="#046571"
-                    android:drawableLeft="@drawable/ic_btn_enfermeros"
-                    android:text="@string/btn_enfermeros" />
+                    android:drawableLeft="@drawable/ic_btnempleado"
+                    android:text="Empleados" />
 
                 <Button
-                    android:id="@+id/btnDoctores"
+                    android:id="@+id/btnCargos"
                     android:layout_width="185dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginBottom="12dp"
                     android:backgroundTint="#046571"
-                    android:drawableLeft="@drawable/ic_btn_doctor"
-                    android:text="Doctores" />
+                    android:drawableLeft="@drawable/ic_btncargos"
+                    android:text="Cargos" />
             </LinearLayout>
 
             <LinearLayout
@@ -151,7 +152,7 @@
                     android:layout_marginBottom="12dp"
                     android:backgroundTint="#046571"
                     android:drawableLeft="@drawable/ic_btn_civiles"
-                    android:text="@string/btn_civiles" />
+                    android:text="pacientes" />
             </LinearLayout>
 
             <LinearLayout
@@ -210,26 +211,28 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btnUsuarios"
-                    android:layout_width="185dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="12dp"
-                    android:backgroundTint="#046571"
-                    android:drawableLeft="@drawable/ic_btn_user"
-                    android:text="@string/btn_usuarios" />
+                android:orientation="horizontal"
+                android:layout_marginTop="-5dp">
                 <Button
                     android:id="@+id/btnPaises"
                     android:layout_width="185dp"
                     android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginBottom="12dp"
                     android:backgroundTint="#046571"
                     android:drawableLeft="@drawable/ic_pais_btn"
                     android:text="@string/btn_paises" />
+                <Button
+                    android:id="@+id/btnCivilComorb"
+                    android:layout_width="185dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#046571"
+                    android:drawableLeft="@drawable/ic_btn_civilcomorbilidad"
+                    android:text="Civil_Comorbilidad" />
             </LinearLayout>
 
         </LinearLayout>

@@ -7,18 +7,22 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.databinding.ActivityRegistrarUsuarioBinding
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.databinding.ActivityRegistarCivilComorbilidadBinding
 
-class RegistrarUsuarioActivity : AppCompatActivity() {
+class RegistarCivilComorbilidadActivity : AppCompatActivity() {
+
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityRegistrarUsuarioBinding
+    private lateinit var binding: ActivityRegistarCivilComorbilidadBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRegistrarUsuarioBinding.inflate(layoutInflater)
+
+        binding = ActivityRegistarCivilComorbilidadBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbarRegistroUsuario)
+
+        setSupportActionBar(binding.toolbar)
 
     }
+
 
 }

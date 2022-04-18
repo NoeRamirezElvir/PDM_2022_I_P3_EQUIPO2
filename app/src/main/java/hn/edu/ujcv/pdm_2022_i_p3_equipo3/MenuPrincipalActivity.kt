@@ -13,8 +13,8 @@ class MenuPrincipalActivity : AppCompatActivity() {
             val intent= Intent(this,VerUnidadesActivity::class.java)
             startActivity(intent)
         }
-        btnEnfermeros.setOnClickListener {
-            val intent= Intent(this,VerEnfermerosActivity::class.java)
+        btnEmpleados.setOnClickListener {
+            val intent= Intent(this,VerEmpleadosActivity::class.java)
             startActivity(intent)
         }
         btnComorbilidad.setOnClickListener {
@@ -37,10 +37,6 @@ class MenuPrincipalActivity : AppCompatActivity() {
             val intent= Intent(this,VerCarnetVacunacionActivity::class.java)
             startActivity(intent)
         }
-        btnUsuarios.setOnClickListener {
-            val intent= Intent(this,VerUsuarioActivity::class.java)
-            startActivity(intent)
-        }
         btnRegionSanitaria.setOnClickListener {
             val intent = Intent(this, VerRegionSanitariaActivity::class.java)
             startActivity(intent)
@@ -57,12 +53,16 @@ class MenuPrincipalActivity : AppCompatActivity() {
             val intent = Intent(this, VerCentroVacunacionActivity::class.java)
             startActivity(intent)
         }
-        btnDoctores.setOnClickListener {
-            val intent = Intent(this, VerDoctoresActivity::class.java)
+        btnCargos.setOnClickListener {
+            val intent = Intent(this, VerCargosActivity::class.java)
             startActivity(intent)
         }
         btnPaises.setOnClickListener{
             val intent = Intent(this, VerPaisesActivity::class.java)
+            startActivity(intent)
+        }
+        btnCivilComorb.setOnClickListener{
+            val intent = Intent(this, VerCivilComorbilidadActivity::class.java)
             startActivity(intent)
         }
     }

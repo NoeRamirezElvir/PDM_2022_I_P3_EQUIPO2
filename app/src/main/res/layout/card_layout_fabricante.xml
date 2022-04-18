@@ -33,7 +33,7 @@
             android:layout_width="234dp"
             android:layout_height="32dp"
             android:layout_marginStart="16dp"
-            android:text="ID Laboratorio"
+            android:text="ID Fabricante"
             android:textSize="18sp"
             android:textColor="@color/black"
             app:layout_constraintLeft_toRightOf="@+id/itemImagenFabric"

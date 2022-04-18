@@ -21,7 +21,7 @@ class RecyclerAdapterCivil(pLista:ArrayList<Civil>? = null) : RecyclerView.Adapt
         var itemDni:TextView    = itemView.findViewById(R.id.itemDniCivil)
         var itemFecha:TextView = itemView.findViewById(R.id.itemFechaCivil)
         var itemTelefono:TextView = itemView.findViewById(R.id.itemTelefonoCivil)
-        var itemCorreo:TextView   = itemView.findViewById(R.id.itemCorreoCivil)
+        var itemdireccion:TextView   = itemView.findViewById(R.id.itemDireccionCivil)
         init {
             itemView.imbtBorrarCivilR.setOnClickListener {
                 Toast.makeText(it.context,"Eliminado Correctamente", Toast.LENGTH_LONG).show()
@@ -42,7 +42,7 @@ class RecyclerAdapterCivil(pLista:ArrayList<Civil>? = null) : RecyclerView.Adapt
         holder.itemDni.text = "0802200204856"
         holder.itemFecha.text = "15/11/2001"
         holder.itemTelefono.text = "98795644"
-        holder.itemCorreo.text = "carlos@ujcv.edu.hn"
+        holder.itemdireccion.text = "Col. las Brisas"
     }
     override fun getItemCount(): Int {
         return 1

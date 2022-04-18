@@ -53,39 +53,25 @@
             app:layout_constraintTop_toTopOf="parent"
             />
         <TextView
-            android:id="@+id/itemDoctorA"
-            android:layout_width="234dp"
-            android:layout_height="18dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="65dp"
-            android:text="Doctor Asignado : "
-            android:textColor="@color/black"
-            app:layout_constraintLeft_toRightOf="@+id/itemImagenUnidad"
-            app:layout_constraintTop_toBottomOf="@+id/itemIdUnidad"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-        <TextView
             android:id="@+id/itemVacunaIyectable"
             android:layout_width="234dp"
             android:layout_height="18dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="65dp"
             android:text="Vacuna a inyectar:"
             android:textColor="@color/black"
             app:layout_constraintLeft_toRightOf="@+id/itemImagenUnidad"
-            app:layout_constraintTop_toBottomOf="@+id/itemDoctorA"
             app:layout_constraintTop_toTopOf="parent"
             />
         <TextView
-            android:id="@+id/itemVacunadorUnidad"
+            android:id="@+id/itemTipoUnidad"
             android:layout_width="234dp"
             android:layout_height="18dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="115dp"
-            android:text="Vacunador"
+            android:layout_marginTop="90dp"
+            android:text="Tipo"
             android:textColor="@color/black"
             app:layout_constraintLeft_toRightOf="@+id/itemImagenUnidad"
-            app:layout_constraintTop_toBottomOf="@+id/itemDoctorA"
             app:layout_constraintTop_toTopOf="parent"
             />
 
