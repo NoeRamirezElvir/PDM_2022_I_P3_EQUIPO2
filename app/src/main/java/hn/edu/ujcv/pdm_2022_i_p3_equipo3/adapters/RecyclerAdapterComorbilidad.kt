@@ -10,12 +10,13 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.R
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.clases.Comorbilidad
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.ComorbilidadDataCollectionItem
 import kotlinx.android.synthetic.main.card_layout_comorbilidad.view.*
 
 import kotlinx.android.synthetic.main.card_layout_region.view.*
 
-class RecyclerAdapterComorbilidad(pListaComorbs:ArrayList<Comorbilidad>? = null): RecyclerView.Adapter<RecyclerAdapterComorbilidad.ViewHolder>() {
-    var listaComorbs: ArrayList<Comorbilidad>? = pListaComorbs
+class RecyclerAdapterComorbilidad(pListaComorbs:ArrayList<ComorbilidadDataCollectionItem>? = null): RecyclerView.Adapter<RecyclerAdapterComorbilidad.ViewHolder>() {
+    var listaComorbs: ArrayList<ComorbilidadDataCollectionItem>? = pListaComorbs
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var itemImagen: ImageView = itemView.findViewById(R.id.itemImagenComorb)

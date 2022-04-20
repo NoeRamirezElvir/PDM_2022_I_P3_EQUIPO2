@@ -24,15 +24,15 @@
         android:inputType="text"
         android:textAlignment="center"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btnActualizarEnfermero"
-        app:layout_constraintEnd_toEndOf="@+id/btnActualizarEnfermero"
+        app:layout_constraintBottom_toTopOf="@+id/btnActualizarCivil"
+        app:layout_constraintEnd_toEndOf="@+id/btnActualizarCivil"
         app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toStartOf="@+id/btnRegistrarEnfermero"
+        app:layout_constraintStart_toStartOf="@+id/btnRegistrarCivil"
         app:layout_constraintTop_toBottomOf="@+id/txtDireccionCivil"
         tools:ignore="Deprecated" />
 
     <Button
-        android:id="@+id/btnRegistrarEnfermero"
+        android:id="@+id/btnRegistrarCivil"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="41dp"
@@ -42,9 +42,9 @@
         android:textColor="@color/white"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnActualizarEnfermero"
+        app:layout_constraintEnd_toStartOf="@+id/btnActualizarCivil"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnActualizarEnfermero"
+        app:layout_constraintTop_toTopOf="@+id/btnActualizarCivil"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextContrastCheck" />
 
@@ -144,7 +144,7 @@
         app:srcCompat="@drawable/ic_man" />
 
     <Button
-        android:id="@+id/btnActualizarEnfermero"
+        android:id="@+id/btnActualizarCivil"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -154,7 +154,7 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRegistrarEnfermero"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistrarCivil"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.947" />
 

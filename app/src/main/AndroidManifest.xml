@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hn.edu.ujcv.pdm_2022_i_p3_equipo3">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -114,15 +115,6 @@
             android:name=".RegistrarRegionSanitariaActivity"
             android:exported="false"
             android:label="@string/title_activity_registrar_region_sanitaria"
-            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
-        <activity
-            android:name=".RegistrarUsuarioActivity"
-            android:exported="false"
-            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
-        <activity
-            android:name=".VerUsuarioActivity"
-            android:exported="false"
-            android:label="@string/title_activity_ver_usuario"
             android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
         <activity
             android:name=".RegistrarCarnetActivity"

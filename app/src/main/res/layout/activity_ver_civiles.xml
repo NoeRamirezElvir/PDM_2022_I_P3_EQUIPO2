@@ -21,7 +21,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
             <EditText
-                android:id="@+id/txtBuscarCodigoEnfermero"
+                android:id="@+id/txtBuscarIdCiviles"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="45dp"
@@ -29,13 +29,13 @@
                 android:layout_marginBottom="5dp"
                 android:background="#3A176D47"
                 android:inputType="number"
-                android:hint="@string/buscar_dni"
+                android:hint="ID"
                 android:textAlignment="center"
                 android:textColorHint="@color/white"
                 android:importantForAutofill="no" />
 
             <ImageButton
-                android:id="@+id/imbtBuscarEnfermero"
+                android:id="@+id/imbtnBuscarCivil"
                 android:layout_width="50dp"
                 android:layout_height="70dp"
                 android:background="@null"
