@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btnActualizarCargo"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreDoctor"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcionCargo"
         app:layout_constraintVertical_bias="0.66" />
 
 
@@ -37,11 +37,11 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreDoctor"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcionCargo"
         app:layout_constraintVertical_bias="0.65" />
 
     <EditText
-        android:id="@+id/txtNombreDoctor"
+        android:id="@+id/txtDescripcionCargo"
         android:layout_width="302dp"
         android:layout_height="50dp"
         android:background="@drawable/txt_registros"
@@ -85,9 +85,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="44dp"
         android:background="@drawable/txt_registros"
-        android:clickable="true"
+        android:clickable="false"
         android:ems="10"
-        android:focusable="true"
+        android:focusable="false"
+        android:enabled="false"
         android:hint="@string/id_civil"
         android:importantForAutofill="no"
         android:inputType="number"

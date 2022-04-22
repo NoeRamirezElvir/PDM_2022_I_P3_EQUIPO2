@@ -25,7 +25,9 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_registrar_cargo" />
+    <include
+        android:id="@+id/contentCargosRegistrar"
+        layout="@layout/content_registrar_cargo" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

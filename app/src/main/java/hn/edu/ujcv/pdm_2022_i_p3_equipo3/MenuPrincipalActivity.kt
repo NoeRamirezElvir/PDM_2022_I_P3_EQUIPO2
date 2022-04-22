@@ -1,8 +1,10 @@
 package hn.edu.ujcv.pdm_2022_i_p3_equipo3
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.EmpleadosDataCollectionItem
 import kotlinx.android.synthetic.main.activity_menu_principal.*
 
 class MenuPrincipalActivity : AppCompatActivity() {
@@ -13,6 +15,7 @@ class MenuPrincipalActivity : AppCompatActivity() {
             val intent= Intent(this,VerUnidadesActivity::class.java)
             startActivity(intent)
         }
+        obtenerUsuario()
         btnEmpleados.setOnClickListener {
             val intent= Intent(this,VerEmpleadosActivity::class.java)
             startActivity(intent)
@@ -65,5 +68,18 @@ class MenuPrincipalActivity : AppCompatActivity() {
             val intent = Intent(this, VerCivilComorbilidadActivity::class.java)
             startActivity(intent)
         }
+    }
+    @SuppressLint("SetTextI18n")
+    fun obtenerUsuario(){
+        val intent = intent
+        val objeto: EmpleadosDataCollectionItem? = intent.getParcelableExtra("usuario")
+        if (objeto != null) {
+            txvBienvenida.text = "Bienvenido: ${objeto.nombre}"
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        this.finish()
     }
 }

@@ -4,7 +4,22 @@
         <item> Masculino</item>
         <item> Femenino</item>
     </string-array>
-    <string name="user">Código</string>
+    <string-array name="spnBusquedaIDNombre">
+        <item> ID</item>
+        <item> Nombre</item>
+    </string-array>
+    <string-array name="spnBusquedaIDNumero">
+        <item> ID</item>
+        <item> #Carnet</item>
+    </string-array>
+    <string-array name="spnDosis">
+        <item> Primera Dosis</item>
+        <item> Segunda Dosis</item>
+        <item> Tercera Dosis</item>
+        <item> Cuarta Dosis</item>
+        <item> Otras</item>
+    </string-array>
+    <string name="user">Nombre</string>
     <string name="password">Contraseña</string>
     <string name="bienvenido">¡Bienvenido!</string>
     <string name="password_recuperar">¿Olvido su contraseña?</string>
@@ -15,7 +30,7 @@
     <string name="enfermero_recyclerview">imagen enfermero recyclerview</string>
     <string name="btn_eliminar_efermeror">Eliminar</string>
     <string name="btn_editar_enfermeror">Editar</string>
-    <string name="txt_codigo_buscar">Código</string>
+    <string name="txt_nombre_buscar">Nombre</string>
     <string name="btn_enfermerosR">boton buscar enfermeros re</string>
     <string name="id_txtre">ID</string>
     <string name="nombre_enfermero">Nombre</string>
@@ -119,7 +134,7 @@
     <string name="buscar_id_detalle">ID</string>
     <string name="id_carnet_detalle_d">ID Carnet Detalle</string>
     <string name="id_carnet">ID Carnet</string>
-    <string name="id_unidad_de_vacunacion">ID Unidad de Vacunacion</string>
+    <string name="id_unidad_de_vacunacion">ID Unidad</string>
     <string name="numero_de_dosis">Numero de Dosis</string>
     <string name="id_vacunador">ID Vacunador</string>
     <string name="observaciones_detalle">Observaciones</string>

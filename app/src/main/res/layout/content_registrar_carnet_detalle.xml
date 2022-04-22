@@ -48,17 +48,12 @@
                     android:textSize="16sp"
                     android:text="@string/id_carnet_detalle_d" />
 
-                <EditText
-                    android:id="@+id/txtIdCarnetDetalle"
+                <Spinner
+                    android:id="@+id/spnCarnetDetalleID"
                     android:layout_width="150dp"
                     android:layout_height="48dp"
                     android:background="@drawable/txt_registros"
-                    android:textAlignment="center"
-                    android:ems="10"
-                    android:hint="@null"
-                    android:inputType="textPersonName"
-                    tools:ignore="SpeakableTextPresentCheck"
-                    android:importantForAutofill="no" />
+                    tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -136,11 +131,14 @@
                     android:layout_height="48dp"
                     android:layout_marginStart="30dp"
                     android:background="@drawable/txt_registros"
+                    android:clickable="false"
+                    android:editable="false"
                     android:ems="10"
+                    android:focusable="false"
                     android:hint="@null"
                     android:inputType="textPersonName"
                     android:textAlignment="center"
-                    tools:ignore="SpeakableTextPresentCheck"
+                    tools:ignore="Deprecated,SpeakableTextPresentCheck"
                     android:importantForAutofill="no" />
             </LinearLayout>
 
@@ -191,7 +189,7 @@
                     android:text="@string/id_vacunador" />
 
                 <Spinner
-                    android:id="@+id/spnDosisDetalle2"
+                    android:id="@+id/spnIDVacunador"
                     android:layout_width="150dp"
                     android:layout_height="48dp"
                     android:background="@drawable/txt_registros"

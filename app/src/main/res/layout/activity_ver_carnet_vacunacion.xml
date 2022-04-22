@@ -21,10 +21,10 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
             <EditText
-                android:id="@+id/txtBuscarCodigoEnfermero"
-                android:layout_width="300dp"
+                android:id="@+id/txtBuscarNumeroCarnet"
+                android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="#FFBB8137"
@@ -33,9 +33,12 @@
                 android:textAlignment="center"
                 android:textColorHint="@color/white"
                 android:importantForAutofill="no" />
-
+            <Spinner
+                android:id="@+id/spnBuscarIDNumeroCarnetE"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
             <ImageButton
-                android:id="@+id/imbtBuscarEnfermero"
+                android:id="@+id/imbtBuscarCarnet"
                 android:layout_width="50dp"
                 android:layout_height="70dp"
                 android:background="@null"

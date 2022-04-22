@@ -26,6 +26,8 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_registrar_empleado" />
+    <include
+        android:id="@+id/contentEmpleadoRegistrar"
+        layout="@layout/content_registrar_empleado" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

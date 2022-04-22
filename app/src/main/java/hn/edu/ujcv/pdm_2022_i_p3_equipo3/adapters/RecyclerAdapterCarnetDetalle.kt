@@ -6,13 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.R
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.RegistrarCarnetActivity
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.VerCarnetDetalleActivity
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.VerCarnetMasDetalleActivity
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.clases.CarnetDetalle
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.CarnetDetallesDataCollectionItem
 import kotlinx.android.synthetic.main.card_layout_carnet_detalle.view.*
 
-class RecyclerAdapterCarnetDetalle(pLista:ArrayList<CarnetDetalle>? = null) : RecyclerView.Adapter<RecyclerAdapterCarnetDetalle.ViewHolder>() {
-    var listaCarnetDetalle:ArrayList<CarnetDetalle>? = pLista
+class RecyclerAdapterCarnetDetalle(var lista:ArrayList<CarnetDetallesDataCollectionItem>? = null,
+var activity:VerCarnetDetalleActivity?=null,var activity2:VerCarnetMasDetalleActivity?=null,var activity3:RegistrarCarnetActivity?=null) : RecyclerView.Adapter<RecyclerAdapterCarnetDetalle.ViewHolder>() {
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         var itemIdDetalleD:TextView = itemView.findViewById(R.id.itemIdCarnetD)
@@ -23,7 +28,30 @@ class RecyclerAdapterCarnetDetalle(pLista:ArrayList<CarnetDetalle>? = null) : Re
 
         init {
             itemView.itemBorrarDetalleD.setOnClickListener {
-                Toast.makeText(it.context,"Eliminado Correctamente", Toast.LENGTH_LONG).show()
+                val position : Int = adapterPosition
+                val message = "ID del Carnet: ${lista!![position].id_carnetEncabezado}" +
+                        "\nNumero de Carnet: ${lista!![position].observacion}."
+                val dialog = AlertDialog.Builder(it.context)
+                    .setTitle("¿Desea Eliminar este Registro?")
+                    .setMessage(message)
+                    .setPositiveButton("Si") {_,_ ->
+                        if(activity!=null){
+                            activity!!.callServiceDeleteCarnetDetalle(lista!!,position)
+                            activity!!.callServiceGetCarnetDetalle()
+                        }
+                        if(activity2!=null){
+                            activity2!!.callServiceDeleteCarnetDetalle(lista!!,position)
+                            activity2!!.callServiceGetCarnetDetalle()
+                        }
+                        if(activity3!=null){
+                            activity3!!.callServiceDeleteCarnetDetalle(lista!!,position)
+                            activity3!!.callServiceGetCarnetDetalle()
+                        }
+                    }
+                    .setNegativeButton("No"){_,_ ->
+                        Toast.makeText(it.context, "No se Elimino el registro: " + lista!![position].id_carnetEncabezado, Toast.LENGTH_SHORT).show()
+                    }.create()
+                dialog.show()
             }
         }
 
@@ -39,15 +67,20 @@ class RecyclerAdapterCarnetDetalle(pLista:ArrayList<CarnetDetalle>? = null) : Re
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: RecyclerAdapterCarnetDetalle.ViewHolder, position: Int) {
-        holder.itemIdDetalleD.text = "1"
-        holder.itemFechaD.text = "6/4/2022"
-        holder.itemDosisD.text = "Primera Dosis"
-        holder.itemNombreVacunadorD.text = "Carlos "
-        holder.itemObservacionD.text = "N/A"
+        if(lista != null){
+            holder.itemIdDetalleD.text = "ID Detalle: ${lista!![position].id_carnetDetalle.toString()}"
+            holder.itemFechaD.text =  lista!![position].fecha
+            holder.itemDosisD.text =  lista!![position].dosis
+            holder.itemNombreVacunadorD.text =  "ID vacunador: ${lista!![position].idEmpleadoVacuno}"
+            holder.itemObservacionD.text =  lista!![position].observacion
+        }
     }
 
     override fun getItemCount(): Int {
-        return 1
-        //return listaCarnetDetalle!!.size
+        return if(lista != null){
+            lista!!.size
+        }else{
+            0
+        }
     }
 }

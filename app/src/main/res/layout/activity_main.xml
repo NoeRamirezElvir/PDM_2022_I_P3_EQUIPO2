@@ -75,9 +75,9 @@
         android:hint="@string/password"
         app:boxStrokeColor="#FF3946A1"
         app:counterEnabled="true"
-        app:counterMaxLength="10"
+        app:counterMaxLength="15"
+        app:helperTextTextColor="#FFFF1800"
         app:endIconMode="password_toggle"
-        app:helperText="*Obligatorio"
         app:layout_constraintEnd_toStartOf="@+id/txvRecuperarContra"
         app:layout_constraintStart_toStartOf="@+id/txvRecuperarContra"
         app:layout_constraintTop_toBottomOf="@+id/txtCodigoUsuario"
@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:maxLength="11"
+            android:maxLength="16"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,8 +102,8 @@
         android:hint="@string/user"
         app:boxStrokeColor="#FF3946A1"
         app:counterEnabled="true"
-        app:counterMaxLength="10"
-        app:helperText="*Obligatorio"
+        app:counterMaxLength="50"
+        app:helperTextTextColor="#FFFF1800"
         app:layout_constraintEnd_toEndOf="@+id/txtContraseUsuario"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtContraseUsuario"
@@ -114,8 +114,8 @@
             android:id="@+id/edittxtCodigoUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:maxLength="11"
+            android:inputType="textPersonName"
+            android:maxLength="51"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
