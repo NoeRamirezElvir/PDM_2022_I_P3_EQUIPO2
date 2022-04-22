@@ -19,6 +19,10 @@
         <item> Cuarta Dosis</item>
         <item> Otras</item>
     </string-array>
+    <string-array name="spnBusquedaIDDepartamento">
+        <item> ID</item>
+        <item> Depto.</item>
+    </string-array>
     <string name="user">Nombre</string>
     <string name="password">Contraseña</string>
     <string name="bienvenido">¡Bienvenido!</string>

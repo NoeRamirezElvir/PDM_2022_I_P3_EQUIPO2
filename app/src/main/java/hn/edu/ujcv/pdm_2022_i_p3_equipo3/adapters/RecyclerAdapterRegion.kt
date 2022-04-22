@@ -1,6 +1,7 @@
 package hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,14 +9,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.R
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.clases.RegionSanitaria
-import kotlinx.android.synthetic.main.card_layout_centro_vacunacion.view.*
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.VerRegionSanitariaActivity
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.RegionDataCollectionItem
 import kotlinx.android.synthetic.main.card_layout_region.view.*
 
-class RecyclerAdapterRegion(pListaRegiones:ArrayList<RegionSanitaria>? = null): RecyclerView.Adapter<RecyclerAdapterRegion.ViewHolder>() {
-    var listaRegiones:ArrayList<RegionSanitaria>? = pListaRegiones
+class RecyclerAdapterRegion(pListaRegiones:List<RegionDataCollectionItem>? = null,
+                            activity_: VerRegionSanitariaActivity):
+    RecyclerView.Adapter<RecyclerAdapterRegion.ViewHolder>() {
+    var listaRegiones:List<RegionDataCollectionItem>? = pListaRegiones
+    var message:String = ""
+    var activity: VerRegionSanitariaActivity = activity_
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
         var itemImagen:       ImageView = itemView.findViewById(R.id.itemImagenRegion)
@@ -23,12 +27,32 @@ class RecyclerAdapterRegion(pListaRegiones:ArrayList<RegionSanitaria>? = null): 
         var itemDepartamento: TextView = itemView.findViewById(R.id.itemDepartamento)
         var itemJefatura:     TextView = itemView.findViewById(R.id.itemJefaturaRegional)
         var itemTelefono:     TextView = itemView.findViewById(R.id.itemTelefonoRegion)
+
         init {
             itemView.itemBtnBorrarRegion.setOnClickListener {
-                Toast.makeText(it.context,"Eliminado Correctamente", Toast.LENGTH_LONG).show()
+                val position:Int = adapterPosition
+                message = listaRegiones!![position].departamento +
+                        "\nJefatura: " + listaRegiones!![position].jefatura +
+                        "\nTelefono: " + listaRegiones!![position].telefono +
+                        "\n ID: " + listaRegiones!![position].id_region
+                val dialog = AlertDialog.Builder(it.context)
+                    .setTitle("¿Desea Eliminar este Registro?")
+                    .setMessage(message)
+                    .setPositiveButton("Si") {_,_->
+                        activity.callServiceDeleteRegion(listaRegiones!!, position)
+                    }
+                    .setNegativeButton("No") {_,_ ->
+                        Toast.makeText(it.context,
+                            "No se Elimino el Registro: " + listaRegiones!![position].id_region,
+                            Toast.LENGTH_SHORT).show()
+                    }.create()
+                dialog.show()
+
             }
+
             itemView.itemBtnEditarRegion.setOnClickListener {
-                Toast.makeText(it.context,"Se abre el registro", Toast.LENGTH_LONG).show()
+                val position:Int = adapterPosition
+                activity.enviar(it.context, listaRegiones, position)
             }
         }
 
@@ -42,16 +66,15 @@ class RecyclerAdapterRegion(pListaRegiones:ArrayList<RegionSanitaria>? = null): 
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: RecyclerAdapterRegion.ViewHolder, position: Int) {
-        //val region=listaRegiones[position]
         holder.itemImagen.setImageResource(R.drawable.ic_region_sanitaria)
-        holder.itemIdRegion.text = "Región Sanitaria No.11"
-        holder.itemDepartamento.text = "Departamento de Choluteca"
-        holder.itemJefatura.text = "Sebastián Vallejo"
-        holder.itemTelefono.text = "Teléfono: 2444-3603"
+        holder.itemIdRegion.text = "Región Sanitaria No."+ listaRegiones!![position].id_region
+        holder.itemDepartamento.text = "Departamento de " + listaRegiones!![position].departamento
+        holder.itemJefatura.text = listaRegiones!![position].jefatura
+        holder.itemTelefono.text = "Teléfono: " + listaRegiones!![position].telefono
     }
 
     override fun getItemCount(): Int {
-        return 1
+        return listaRegiones!!.size
     }
 
 

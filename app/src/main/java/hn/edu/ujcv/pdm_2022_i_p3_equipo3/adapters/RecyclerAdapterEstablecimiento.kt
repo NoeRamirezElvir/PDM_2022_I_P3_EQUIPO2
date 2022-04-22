@@ -1,6 +1,7 @@
 package hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,16 +9,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.R
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.clases.EstablecimientoSalud
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.clases.RegionSanitaria
-import kotlinx.android.synthetic.main.card_layout_centro_vacunacion.view.*
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.VerEstablecimientosActivity
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.EstablecimientoSaludDataCollectionItem
 import kotlinx.android.synthetic.main.card_layout_establecimientos.view.*
-import org.w3c.dom.Text
 
-class RecyclerAdapterEstablecimiento(pListaEstablecimientos:ArrayList<EstablecimientoSalud>? = null): RecyclerView.Adapter<RecyclerAdapterEstablecimiento.ViewHolder>() {
-    var listaEstablecimientos:ArrayList<EstablecimientoSalud>? = pListaEstablecimientos
+class RecyclerAdapterEstablecimiento(pListaEstablecimientos:List<EstablecimientoSaludDataCollectionItem>? = null,
+                                     activity_: VerEstablecimientosActivity):
+    RecyclerView.Adapter<RecyclerAdapterEstablecimiento.ViewHolder>() {
+    var listaEstablecimientos:List<EstablecimientoSaludDataCollectionItem>? = pListaEstablecimientos
+    var message:String = ""
+    var activity: VerEstablecimientosActivity = activity_
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
         var itemImagen:ImageView = itemView.findViewById(R.id.itemImagenEstablecimientos)
@@ -28,10 +30,29 @@ class RecyclerAdapterEstablecimiento(pListaEstablecimientos:ArrayList<Establecim
         var itemMunicipio:TextView = itemView.findViewById(R.id.itemMunicipioEstablecimiento)
         init {
             itemView.itemBtnBorrarEstablecimiento.setOnClickListener {
-                Toast.makeText(it.context,"Eliminado Correctamente", Toast.LENGTH_LONG).show()
+                val position:Int = adapterPosition
+                message = "Establecimiento: " + listaEstablecimientos!![position].nombre +
+                        "\nDireccion: " + listaEstablecimientos!![position].direccion +
+                        "\nTelefono: " + listaEstablecimientos!![position].telefono +
+                        "\nMunicipio No." + listaEstablecimientos!![position].id_municipio +
+                        "\n ID: " + listaEstablecimientos!![position].id_municipio
+                val dialog = AlertDialog.Builder(it.context)
+                    .setTitle("¿Desea Eliminar este Registro?")
+                    .setMessage(message)
+                    .setPositiveButton("Si") {_,_ ->
+                        activity.callServiceDeleteEstablecimiento(listaEstablecimientos!!, position)
+                    }
+                    .setNegativeButton("No") {_,_ ->
+                        Toast.makeText(it.context, "No se elimino el registro: " +
+                                listaEstablecimientos!![position].id_establecimiento,
+                            Toast.LENGTH_LONG).show()
+                    }.create()
+                dialog.show()
             }
+
             itemView.itemBtnEditarEstablecimiento.setOnClickListener {
-                Toast.makeText(it.context,"Se abre el registro", Toast.LENGTH_LONG).show()
+                val position: Int = adapterPosition
+                activity.enviar(it.context, listaEstablecimientos!!, position)
             }
         }
 
@@ -45,17 +66,17 @@ class RecyclerAdapterEstablecimiento(pListaEstablecimientos:ArrayList<Establecim
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: RecyclerAdapterEstablecimiento.ViewHolder, position: Int) {
-        //val region=listaRegiones[position]
         holder.itemImagen.setImageResource(R.drawable.ic_salud_establecimiento)
-        holder.itemIdEstablecimiento.text = "Establecimiento de Salud No.4"
-        holder.itemNbeEstablecimiento.text = "San Antonio de Oriente"
-        holder.itemDireccion.text = "Dirección: Aldea El Terreo"
-        holder.itemTelefono.text = "Teléfono: 27762374"
-        holder.itemMunicipio.text = "Municipio de San Antonio"
+        holder.itemIdEstablecimiento.text = "Establecimiento de Salud No." +
+                listaEstablecimientos!![position].id_establecimiento
+        holder.itemNbeEstablecimiento.text = listaEstablecimientos!![position].nombre
+        holder.itemDireccion.text = "Dirección: " + listaEstablecimientos!![position].direccion
+        holder.itemTelefono.text = "Teléfono: " + listaEstablecimientos!![position].telefono
+        holder.itemMunicipio.text = "Municipio No." + listaEstablecimientos!![position].id_municipio
     }
 
     override fun getItemCount(): Int {
-        return 1
+        return listaEstablecimientos!!.size
     }
 
 

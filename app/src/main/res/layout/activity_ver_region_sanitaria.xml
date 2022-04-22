@@ -22,25 +22,33 @@
 
             <EditText
                 android:id="@+id/txtBuscarRegion"
-                android:layout_width="300dp"
+                android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="#3A176D47"
-                android:inputType="number"
+                android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:hint="ID Región Sanitaria"
+                android:hint="ID"
                 android:textSize="16sp"
                 android:textColorHint="@color/white"
                 android:importantForAutofill="no" />
+
+            <Spinner
+                android:id="@+id/spnBuscarRegion"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:scrollbarSize="30dp"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/btnBuscarRegion"
                 android:layout_width="50dp"
                 android:layout_height="70dp"
                 android:background="@null"
-                android:src="@drawable/ic_buscar" />
+                android:src="@drawable/ic_buscar"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -55,6 +63,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

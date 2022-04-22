@@ -33,35 +33,35 @@
         app:layout_constraintStart_toEndOf="@+id/btnRegistrarEstablecimiento"
         app:layout_constraintTop_toBottomOf="@+id/scrollMunicipio" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="405dp"
-        android:layout_height="185dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollMunicipio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_establecimiento" />
 
     <ScrollView
         android:id="@+id/scrollMunicipio"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="530dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="0dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="405dp"
+                android:layout_height="185dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/scrollMunicipio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_establecimiento" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txlIdEstablecimiento"
@@ -89,6 +89,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="ID"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:enabled="false"
                     android:textColorHint="@color/black"
                     android:textColor="@color/black"
                     android:importantForAutofill="no"
@@ -163,7 +166,7 @@
                     android:textColor="@color/black"
                     android:importantForAutofill="no"
                     android:inputType="text"
-                    android:maxLength="40"
+                    android:maxLength="50"
                     android:minHeight="48dp"
                     tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -203,17 +206,18 @@
                     android:minHeight="48dp"
                     tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Municipio"
                     android:layout_marginStart="60dp"
-                    android:layout_marginTop="10dp"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     />
@@ -232,3 +236,4 @@
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

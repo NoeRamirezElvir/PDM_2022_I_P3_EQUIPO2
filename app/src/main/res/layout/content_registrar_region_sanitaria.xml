@@ -35,34 +35,34 @@
         app:layout_constraintStart_toEndOf="@+id/btnRegistrarRegion"
         app:layout_constraintTop_toBottomOf="@+id/scrollRegionSanitaria" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="405dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollRegionSanitaria"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_region_sanitaria" />
 
     <ScrollView
         android:id="@+id/scrollRegionSanitaria"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="510dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="405dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/scrollRegionSanitaria"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_region_sanitaria" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txlIdRegion"
@@ -90,6 +90,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="ID"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:enabled="false"
                     android:textColorHint="@color/black"
                     android:textColor="@color/black"
                     android:importantForAutofill="no"
@@ -120,7 +123,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtDptEstablecimiento"
+                    android:id="@+id/txtDepartamento"
                     android:background="@drawable/txt_registros"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -208,3 +211,4 @@
 
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

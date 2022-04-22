@@ -63,7 +63,7 @@ class RegistrarUnidadActivity : AppCompatActivity() {
     }
     fun callServiceGetCentros() {
         val centroService: CentroVacunacionService = RestEngine.buildService().create(CentroVacunacionService::class.java)
-        val result: Call<List<CentroVacunacionDataCollectionItem>> = centroService.listCentros()
+        val result: Call<List<CentroVacunacionDataCollectionItem>> = centroService.listCentrosVacunacion()
         result.enqueue(
             object : Callback<List<CentroVacunacionDataCollectionItem>> {
                 override fun onFailure(call: Call<List<CentroVacunacionDataCollectionItem>>, t: Throwable) {
