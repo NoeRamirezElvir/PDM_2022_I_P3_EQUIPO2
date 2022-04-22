@@ -22,18 +22,21 @@
 
             <EditText
                 android:id="@+id/txtBuscarIdCiviles"
-                android:layout_width="300dp"
+                android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="#3A176D47"
-                android:inputType="number"
-                android:hint="ID"
+                android:inputType="textPersonName"
                 android:textAlignment="center"
+                android:hint="Buscar"
                 android:textColorHint="@color/white"
                 android:importantForAutofill="no" />
-
+            <Spinner
+                android:id="@+id/spnIDNombreBuscarCivil"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
             <ImageButton
                 android:id="@+id/imbtnBuscarCivil"
                 android:layout_width="50dp"
@@ -53,10 +56,10 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginStart="@dimen/fab_margin"
         android:layout_marginBottom="76dp"
         app:layout_anchor="@id/contentCiviles"
-        app:layout_anchorGravity="end|bottom"
+        app:layout_anchorGravity="bottom"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -64,8 +67,8 @@
         android:id="@+id/fabListarCiviles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/fab_margin"
         android:layout_marginBottom="10dp"
         app:srcCompat="@drawable/ic_listar" />
 

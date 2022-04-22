@@ -128,19 +128,28 @@ class RegistrarCivilActivity : AppCompatActivity() {
                     call: Call<CivilDataCollectionItem>,
                     response: Response<CivilDataCollectionItem>
                 ) {
-                    if (response.isSuccessful){
-                        val updateCivil = response.body()!!
-                        Toast.makeText(this@RegistrarCivilActivity,"Actualizado exitosamente :" +updateCivil.nombre,Toast.LENGTH_LONG).show()
-                    }
-                    else if(response.code()==401){
-                        Toast.makeText(this@RegistrarCivilActivity,"Sesion Expirada",Toast.LENGTH_LONG).show()
-                    }else{
-                        Toast.makeText(this@RegistrarCivilActivity,"Fallo al obtener el item",Toast.LENGTH_LONG).show()
+                    when{
+                        response.isSuccessful -> {
+                            val updateCivil = response.body()!!
+                            Toast.makeText(this@RegistrarCivilActivity, "Actualizado Exitosamente: "+ updateCivil.id_civil, Toast.LENGTH_LONG).show()
+                            limpiar()
+                        }
+                        response.code()==401 -> {
+                            Toast.makeText(this@RegistrarCivilActivity,"Sesion Expirada",Toast.LENGTH_LONG).show()
+                        }
+                        response.code()==500 -> {
+                            val errorResponse = Gson().fromJson(response.errorBody()!!.string(), RestApiError::class.java)
+                            Toast.makeText(this@RegistrarCivilActivity,errorResponse.errorDetails, Toast.LENGTH_LONG).show()
+                        }
+                        else -> {
+                            Toast.makeText(this@RegistrarCivilActivity,"Fallo al obtener el item",Toast.LENGTH_LONG).show()
+                        }
                     }
                 }
             }
         )
     }
+
     //
     private fun callServicePostCivil() {
         val civilInfo = CivilDataCollectionItem(
@@ -154,11 +163,21 @@ class RegistrarCivilActivity : AppCompatActivity() {
         )
         addPerson(civilInfo){
             if (it?.id_civil != null){
-                Toast.makeText(this@RegistrarCivilActivity,"Se ha Registrado correctamente"+it?.nombre, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@RegistrarCivilActivity,"Se ha Registrado correctamente "+it?.nombre, Toast.LENGTH_LONG).show()
+                limpiar()
             }else{
                 Toast.makeText(this@RegistrarCivilActivity,"Error" + it?.id_civil, Toast.LENGTH_LONG).show()
             }
         }
+    }
+    //
+    private fun limpiar() {
+        txtIdCivil.setText("")
+        txtDniCivil.setText("")
+        txtNombreCivil.setText("")
+        txtTelefonoCivil.setText("")
+        txtDireccionCivil.setText("")
+        txtFechaNacimiento.setText("")
     }
     //
     private fun addPerson(personData:CivilDataCollectionItem, onResult:(CivilDataCollectionItem?)->Unit){

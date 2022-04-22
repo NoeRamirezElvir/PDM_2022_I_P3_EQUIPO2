@@ -10,6 +10,8 @@ interface CivilService {
     fun listCiviles(): Call<List<CivilDataCollectionItem>>
     @GET("civiles/id/{id}")
     fun getCivilById(@Path("id") id : Long) :Call<CivilDataCollectionItem>
+    @GET("civiles/nombre/{nombre}")
+    fun getCivilByNombre(@Path("nombre") nombre : String) : Call<CivilDataCollectionItem>
     @Headers("Content-Type: application/json")
     @POST("civiles/addCivil")
     fun addCivil(@Body civilData : CivilDataCollectionItem):Call<CivilDataCollectionItem>

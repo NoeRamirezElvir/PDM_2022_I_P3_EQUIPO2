@@ -202,7 +202,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtObservacion"
                     android:layout_width="match_parent"
-                    android:layout_height="46dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/txt_registros"
                     android:hint="Observacion"
                     android:importantForAutofill="no"

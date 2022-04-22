@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 class ComorbilidadDataCollection : ArrayList<ComorbilidadDataCollectionItem>()
 @Parcelize
 data class ComorbilidadDataCollectionItem(
-    val id: Long?,
+    val id_comorbilidad: Long?,
     val nombre:String,
     val tipo: String
 ) : Parcelable
