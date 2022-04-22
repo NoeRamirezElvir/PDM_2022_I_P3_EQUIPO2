@@ -25,7 +25,7 @@ import kotlin.collections.ArrayList
 
 class RegistrarCarnetDetalleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrarCarnetDetalleBinding
-    private val formatDate = SimpleDateFormat("yyyy - MM - dd",Locale.US)
+    private val formatDate = SimpleDateFormat("yyyy-MM-dd",Locale.US)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrarCarnetDetalleBinding.inflate(layoutInflater)
