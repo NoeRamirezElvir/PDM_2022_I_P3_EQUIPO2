@@ -31,15 +31,15 @@ class RegistrarRegionSanitariaActivity : AppCompatActivity() {
         recibir()
 
         btnRegistrarRegion.setOnClickListener { v ->
-            if (txtDepartamento.text.isNullOrEmpty()) {
+            if (!validarDatos()) {
                 Toast.makeText(this@RegistrarRegionSanitariaActivity,
-                    "Departamento esta vacio", Toast.LENGTH_LONG).show()
+                    "Datos de la region estan vacios", Toast.LENGTH_LONG).show()
             } else
                 callServicePostRegion()
         }
 
         btnActualizarRegion.setOnClickListener { v->
-            if (txtIdRegion.text.isNullOrEmpty() || txtDepartamento.text.isNullOrEmpty()) {
+            if (txtIdRegion.text.isNullOrEmpty() || !validarDatos()) {
                 Toast.makeText(this@RegistrarRegionSanitariaActivity, "Datos de la region " +
                         "estan vacios", Toast.LENGTH_LONG).show()
             } else
@@ -49,12 +49,21 @@ class RegistrarRegionSanitariaActivity : AppCompatActivity() {
 
     private fun recibir() {
         val intent = intent
-        var objeto = intent.getParcelableExtra("region") as RegionDataCollectionItem?
+        val objeto = intent.getParcelableExtra("region") as RegionDataCollectionItem?
         if (objeto != null) {
             txtIdRegion.setText(objeto.id_region.toString())
             txtDepartamento.setText(objeto.departamento)
             txtJefaturaRegional.setText(objeto.jefatura)
             txtTelefonoRegion.setText(objeto.telefono.toString())
+        }
+    }
+
+    private fun validarDatos():Boolean {
+        when {
+            txtDepartamento.text.isNullOrEmpty() -> return false
+            txtJefaturaRegional.text.isNullOrEmpty() -> return false
+            txtTelefonoRegion.text.isNullOrEmpty() -> return false
+            else -> return true
         }
     }
 

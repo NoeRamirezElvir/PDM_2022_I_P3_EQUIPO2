@@ -38,9 +38,9 @@ class RegistrarCentroVacActivity : AppCompatActivity() {
         llenarSpinners()
 
         btnRegistrarCentro.setOnClickListener { v->
-            if (txtNombreCentro.text.isNullOrEmpty()) {
+            if (txtNombreCentro.text.isNullOrEmpty() || txtDireccionCentro.text.isNullOrEmpty()) {
                 Toast.makeText(this@RegistrarCentroVacActivity,
-                    "Nombre del Centro de Vacunacion esta vacio",
+                    "Datos del Centro de Vacunacion estan vacios",
                     Toast.LENGTH_LONG).show()
             } else if (!validarHorario()) {
                 Toast.makeText(this@RegistrarCentroVacActivity,

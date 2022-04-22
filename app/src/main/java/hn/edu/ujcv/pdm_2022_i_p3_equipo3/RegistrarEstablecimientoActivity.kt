@@ -38,16 +38,16 @@ class RegistrarEstablecimientoActivity : AppCompatActivity() {
         callServiceGetMunicipios()
 
         btnRegistrarEstablecimiento.setOnClickListener { v->
-            if (txtNombreEstablecimiento.text.isNullOrEmpty()) {
+            if (!validarDatos()) {
                 Toast.makeText(this@RegistrarEstablecimientoActivity,
-                    "Nombre del Establecimiento esta vacio",
+                    "Datos del establecimiento estan vacios",
                     Toast.LENGTH_LONG).show()
             } else
                 callServicePostEstablecimiento()
         }
 
         btnActualizarEstablecimiento.setOnClickListener { v->
-            if (txtIdEstablecimiento.text.isNullOrEmpty() || txtNombreEstablecimiento.text.isNullOrEmpty()) {
+            if (txtIdEstablecimiento.text.isNullOrEmpty() || !validarDatos()) {
                 Toast.makeText(this@RegistrarEstablecimientoActivity,
                     "Datos del establecimiento estan vacios",
                     Toast.LENGTH_LONG).show()
@@ -65,6 +65,15 @@ class RegistrarEstablecimientoActivity : AppCompatActivity() {
             txtNombreEstablecimiento.setText(objeto.nombre)
             txtDireccionEstablecimiento.setText(objeto.direccion)
             txtTelefonoEstablecimiento.setText(objeto.telefono.toString())
+        }
+    }
+
+    private fun validarDatos():Boolean {
+        when {
+            txtNombreEstablecimiento.text.isNullOrEmpty() -> return false
+            txtDireccionEstablecimiento.text.isNullOrEmpty() -> return false
+            txtTelefonoEstablecimiento.text.isNullOrEmpty() -> return false
+            else -> return true
         }
     }
 
