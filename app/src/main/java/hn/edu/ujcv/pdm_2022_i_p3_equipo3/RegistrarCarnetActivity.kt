@@ -86,7 +86,7 @@ class RegistrarCarnetActivity : AppCompatActivity() {
         }
     }
     private fun callServiceGetCiviles() {
-        val civilService: CivilesService = RestEngine.buildService().create(CivilesService::class.java)
+        val civilService: CivilService = RestEngine.buildService().create(CivilService::class.java)
         val result: Call<List<CivilDataCollectionItem>> = civilService.listCiviles()
         result.enqueue(
             object : Callback<List<CivilDataCollectionItem>> {

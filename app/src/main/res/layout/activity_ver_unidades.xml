@@ -22,18 +22,21 @@
 
             <EditText
                 android:id="@+id/txtBuscarUnidad"
-                android:layout_width="300dp"
+                android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="#3A176D47"
-                android:inputType="number"
+                android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:hint="ID Unidad"
-                android:textSize="16sp"
+                android:hint="Buscar"
                 android:textColorHint="@color/white"
                 android:importantForAutofill="no" />
+            <Spinner
+                android:id="@+id/spnIDNombreBuscarUnidad"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
 
             <ImageButton
                 android:id="@+id/btnBuscarUniadad"
@@ -52,17 +55,17 @@
         android:id="@+id/fabUnidades"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/fab_margin"
         android:layout_marginBottom="76dp"
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabListarVacunas"
+        android:id="@+id/fabListarUnidades"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/fab_margin"
         android:layout_marginBottom="10dp"
         app:srcCompat="@drawable/ic_listar" />
 

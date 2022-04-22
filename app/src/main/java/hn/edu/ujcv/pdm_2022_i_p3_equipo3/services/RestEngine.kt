@@ -4,7 +4,8 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
+//ricoy: 192.168.1.3
+//noe: 192.168.0.12
 class RestEngine {
     companion object{
         fun buildService(): Retrofit {
@@ -12,7 +13,7 @@ class RestEngine {
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
             val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
             return Retrofit.Builder()
-                .baseUrl("http://192.168.0.12:8080/api/v1/")
+                .baseUrl("http://192.168.1.3:8080/api/v1/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

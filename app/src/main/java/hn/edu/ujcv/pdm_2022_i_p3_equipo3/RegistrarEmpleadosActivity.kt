@@ -10,10 +10,7 @@ import androidx.core.widget.doAfterTextChanged
 import com.google.gson.Gson
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters.SpinnerAdapterIDString
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.databinding.ActivityRegistrarEmpleadoBinding
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.CargosDataCollectionItem
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.EmpleadosDataCollectionItem
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.RestApiError
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.UnidadVacunacionDataCollectionItem
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.*
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.services.CargosService
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.services.EmpleadosService
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.services.RestEngine
@@ -185,14 +182,14 @@ class RegistrarEmpleadosActivity : AppCompatActivity() {
     }
     private fun callServiceGetUnidadVacunacion() {
         val unidadService: UnidadService = RestEngine.buildService().create(UnidadService::class.java)
-        val result: Call<List<UnidadVacunacionDataCollectionItem>> = unidadService.listUnidadVacunacion()
-        result.enqueue(object: Callback<List<UnidadVacunacionDataCollectionItem>> {
-            override fun onFailure(call: Call<List<UnidadVacunacionDataCollectionItem>>, t: Throwable) {
+        val result: Call<List<UnidadDataCollectionItem>> = unidadService.listUnidades()
+        result.enqueue(object: Callback<List<UnidadDataCollectionItem>> {
+            override fun onFailure(call: Call<List<UnidadDataCollectionItem>>, t: Throwable) {
                 Toast.makeText(this@RegistrarEmpleadosActivity,"Error", Toast.LENGTH_LONG).show()
             }
             override fun onResponse(
-                call: Call<List<UnidadVacunacionDataCollectionItem>>,
-                response: Response<List<UnidadVacunacionDataCollectionItem>>
+                call: Call<List<UnidadDataCollectionItem>>,
+                response: Response<List<UnidadDataCollectionItem>>
             ) {
                 val unidades = arrayListOf<SpinnerAdapterIDString>()
                 for(item in response.body()!!) {
