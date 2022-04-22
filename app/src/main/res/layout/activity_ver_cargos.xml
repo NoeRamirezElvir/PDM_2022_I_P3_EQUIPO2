@@ -22,19 +22,22 @@
 
             <EditText
                 android:id="@+id/txtBuscarCargo"
-                android:layout_width="300dp"
+                android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="#3A176D47"
-                android:inputType="number"
+                android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:hint="ID Cargo"
+                android:hint="Nombre"
                 android:textSize="16sp"
                 android:textColorHint="@color/white"
                 android:importantForAutofill="no" />
-
+            <Spinner
+                android:id="@+id/spnIDNombreBuscarCargo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
             <ImageButton
                 android:id="@+id/btnBuscarCargo"
                 android:layout_width="50dp"

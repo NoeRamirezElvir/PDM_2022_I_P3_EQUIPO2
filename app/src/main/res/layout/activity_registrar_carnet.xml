@@ -28,7 +28,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include android:id="@+id/contentDetalles"
+    <include android:id="@+id/contentCarnetEncabezado"
         layout="@layout/content_registrar_carnet"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -8,7 +8,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/spnPacienteEncabezado"
         android:layout_width="210dp"
         android:layout_height="50dp"
         android:layout_marginBottom="14dp"
@@ -20,14 +20,15 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/txtIdEnfermero"
+        android:id="@+id/txtIdEncabezado"
         android:layout_width="210dp"
         android:layout_height="50dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/txt_registros"
-        android:clickable="true"
+        android:clickable="false"
         android:ems="10"
-        android:focusable="true"
+        android:focusable="false"
+        android:enabled="false"
         android:hint="@string/id_txtre"
         android:importantForAutofill="no"
         android:inputType="number"
@@ -52,13 +53,13 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txtIdEnfermero"
+        app:layout_constraintBottom_toTopOf="@+id/txtIdEncabezado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+        app:layout_constraintTop_toBottomOf="@+id/spnPacienteEncabezado" />
 
     <Button
-        android:id="@+id/btnRegistrarEnfermero"
+        android:id="@+id/btnRegistrarCarnetEncabezado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
@@ -69,7 +70,7 @@
         android:textColor="@color/black"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnActualizarEnfermero"
+        app:layout_constraintEnd_toStartOf="@+id/btnActualizarCarnetEncabezado"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
@@ -82,7 +83,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner3"
+        app:layout_constraintBottom_toTopOf="@+id/spnPacienteEncabezado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -93,10 +94,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarEnfermero"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarCarnetEncabezado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIdEnfermero">
+        app:layout_constraintTop_toBottomOf="@+id/txtIdEncabezado">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -126,7 +127,7 @@
         <ScrollView
             android:id="@+id/scrollView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="200dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerDetallesC"
@@ -137,7 +138,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnActualizarEnfermero"
+        android:id="@+id/btnActualizarCarnetEncabezado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
@@ -145,8 +146,8 @@
         android:text="@string/actualizar_enfermero"
         android:textColor="@color/black"
         app:backgroundTint="@null"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnRegistrarEnfermero"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRegistrarCarnetEncabezado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRegistrarEnfermero" />
+        app:layout_constraintStart_toEndOf="@+id/btnRegistrarCarnetEncabezado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
