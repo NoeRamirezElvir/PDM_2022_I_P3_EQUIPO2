@@ -88,14 +88,14 @@ class RegistrarCarnetDetalleActivity : AppCompatActivity() {
     }
     private fun callServiceGetUnidadVacunacion() {
         val unidadService: UnidadService = RestEngine.buildService().create(UnidadService::class.java)
-        val result: Call<List<UnidadVacunacionDataCollectionItem>> = unidadService.listUnidadVacunacion()
-        result.enqueue(object: Callback<List<UnidadVacunacionDataCollectionItem>> {
-            override fun onFailure(call: Call<List<UnidadVacunacionDataCollectionItem>>, t: Throwable) {
+        val result: Call<List<UnidadDataCollectionItem>> = unidadService.listUnidades()
+        result.enqueue(object: Callback<List<UnidadDataCollectionItem>> {
+            override fun onFailure(call: Call<List<UnidadDataCollectionItem>>, t: Throwable) {
                 Toast.makeText(this@RegistrarCarnetDetalleActivity,"Error", Toast.LENGTH_LONG).show()
             }
             override fun onResponse(
-                call: Call<List<UnidadVacunacionDataCollectionItem>>,
-                response: Response<List<UnidadVacunacionDataCollectionItem>>
+                call: Call<List<UnidadDataCollectionItem>>,
+                response: Response<List<UnidadDataCollectionItem>>
             ) {
                 val unidades = arrayListOf<SpinnerAdapterIDString>()
                 for(item in response.body()!!) {

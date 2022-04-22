@@ -117,15 +117,6 @@
             android:label="@string/title_activity_registrar_region_sanitaria"
             android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
         <activity
-            android:name=".RegistrarUsuarioActivity"
-            android:exported="false"
-            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
-        <activity
-            android:name=".VerUsuarioActivity"
-            android:exported="false"
-            android:label="@string/title_activity_ver_usuario"
-            android:theme="@style/Theme.PDM_2022_I_P3_EQUIPO3.NoActionBar" />
-        <activity
             android:name=".RegistrarCarnetActivity"
             android:exported="false"
             android:label="@string/title_activity_registrar_carnet"

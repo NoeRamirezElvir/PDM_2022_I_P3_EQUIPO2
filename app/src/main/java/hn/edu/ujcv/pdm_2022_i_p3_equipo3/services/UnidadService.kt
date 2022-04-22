@@ -1,23 +1,23 @@
 package hn.edu.ujcv.pdm_2022_i_p3_equipo3.services
 
-import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.UnidadVacunacionDataCollectionItem
+import hn.edu.ujcv.pdm_2022_i_p3_equipo3.entities.UnidadDataCollectionItem
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 
 interface UnidadService {
     @GET("unidadVacunacion")
-    fun listUnidadVacunacion(): Call<List<UnidadVacunacionDataCollectionItem>>
+    fun listUnidades(): Call<List<UnidadDataCollectionItem>>
     @GET("unidadVacunacion/id/{id}")
-    fun getUnidadVacunacion(@Path("id") id:Long): Call<UnidadVacunacionDataCollectionItem>
+    fun getUnidadById(@Path("id") id : Long) : Call<UnidadDataCollectionItem>
     @GET("unidadVacunacion/tipo/{tipo}")
-    fun getUnidadVacunacion(@Path("tipo") nombre:String): Call<UnidadVacunacionDataCollectionItem>
+    fun getUnidadByNombre(@Path("tipo") tipo : String) : Call<UnidadDataCollectionItem>
     @Headers("Content-Type: application/json")
-    @POST("unidadVacunacion/addUnidadVacunacion")
-    fun addUnidadVacunacion(@Body unidadData: UnidadVacunacionDataCollectionItem): Call<UnidadVacunacionDataCollectionItem>
+    @POST("unidadVacunacion/addUnidad")
+    fun addUnidad(@Body unidadData : UnidadDataCollectionItem): Call<UnidadDataCollectionItem>
     @Headers("Content-Type: application/json")
     @PUT("unidadVacunacion")
-    fun updateUnidadVacunacion(@Body unidadData: UnidadVacunacionDataCollectionItem): Call<UnidadVacunacionDataCollectionItem>
+    fun updateUnidad(@Body unidadData: UnidadDataCollectionItem): Call<UnidadDataCollectionItem>
     @DELETE("unidadVacunacion/delete/{id}")
-    fun deleteUnidadVacunacion(@Path("id") id:Long): Call<ResponseBody>
+    fun deleteUnidad(@Path("id") id: Long) : Call<ResponseBody>
 }

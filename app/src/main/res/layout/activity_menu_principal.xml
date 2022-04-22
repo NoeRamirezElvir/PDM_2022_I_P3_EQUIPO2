@@ -232,7 +232,7 @@
                     android:layout_marginBottom="16dp"
                     android:backgroundTint="#046571"
                     android:drawableLeft="@drawable/ic_btn_civilcomorbilidad"
-                    android:text="Civil_Comorbilidad" />
+                    android:text="Paciente_Comorbilidad" />
             </LinearLayout>
 
         </LinearLayout>
