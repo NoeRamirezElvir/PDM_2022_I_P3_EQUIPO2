@@ -45,6 +45,7 @@ class VerCarnetVacunacionActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbarCarnet)
         //-------------------------------------------------
         callServiceGetCarnetEncabezado()
+        binding.fab2.setOnClickListener { callServiceGetCarnetEncabezado()}
         layoutManager = LinearLayoutManager(this)
         binding.contentCarnet.recyclerCarnet.layoutManager = layoutManager
         //-----------------------------------
@@ -175,7 +176,7 @@ class VerCarnetVacunacionActivity : AppCompatActivity() {
                             Toast.makeText(this@VerCarnetVacunacionActivity,"Sesion Expirada",Toast.LENGTH_LONG).show()
                         }
                         else -> {
-                            Toast.makeText(this@VerCarnetVacunacionActivity,"Fallo al traer el item",Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@VerCarnetVacunacionActivity,"Fallo al traer el item o se esta utilizando en otro registro",Toast.LENGTH_LONG).show()
                         }
                     }
                 }

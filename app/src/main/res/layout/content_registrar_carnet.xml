@@ -103,12 +103,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
+            <ImageButton
+                android:id="@+id/imvButtonActualizarCarnetsDetalles"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="3dp"
+                android:backgroundTint="#FFC4883A"
+                app:srcCompat="@android:drawable/stat_notify_sync" />
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="125dp"
                 android:text="@string/detalles_carnet"
                 android:textAlignment="center"
                 android:textColor="@color/white"

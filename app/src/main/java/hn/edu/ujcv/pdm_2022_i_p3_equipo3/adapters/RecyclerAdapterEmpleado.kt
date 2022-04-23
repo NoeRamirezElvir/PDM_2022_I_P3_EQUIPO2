@@ -37,7 +37,6 @@ class RecyclerAdapterEmpleado(var listaEmpleado:List<EmpleadosDataCollectionItem
                     .setMessage(message)
                     .setPositiveButton("Si") {_,_ ->
                         activity.callServiceDeleteEmpleado(listaEmpleado!!,position)
-                        activity.callServiceGetEmpleados()
                     }
                     .setNegativeButton("No"){_,_ ->
                         Toast.makeText(it.context, "No se Elimino el registro: " + listaEmpleado!![position].id_empleado, Toast.LENGTH_SHORT).show()

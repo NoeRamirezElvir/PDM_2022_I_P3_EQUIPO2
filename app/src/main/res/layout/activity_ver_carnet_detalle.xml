@@ -49,4 +49,18 @@
     <include
         android:id="@+id/contentCarnetDetalle"
         layout="@layout/content_ver_carnet_detalle"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/imvButtonActualizarCarnetsDetallesVista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="@dimen/fab_margin"
+        app:layout_anchor="@id/contentCarnetDetalle"
+        app:backgroundTint="#FFC68C13"
+        app:layout_anchorGravity="bottom"
+        app:srcCompat="@android:drawable/ic_input_get"
+        tools:ignore="SpeakableTextPresentCheck" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

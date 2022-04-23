@@ -57,11 +57,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        android:layout_marginBottom="80dp"
+        app:layout_anchor="@id/contentEmpleado"
+        app:layout_anchorGravity="bottom"
+        android:layout_marginStart="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/fab_margin"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         app:layout_anchor="@id/contentEmpleado"
-        app:layout_anchorGravity="end|bottom"
-        app:srcCompat="@android:drawable/ic_input_add"
+        app:layout_anchorGravity="bottom"
+        app:srcCompat="@android:drawable/ic_input_get"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

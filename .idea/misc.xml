@@ -145,6 +145,16 @@
         <entry key="..\:/Users/nblad/Desktop/PDM_2022_I_P3_EQUIPO3/app/src/main/res/layout/fragment_first.xml" value="0.2" />
         <entry key="..\:/Users/nblad/Desktop/PDM_2022_I_P3_EQUIPO3/app/src/main/res/layout/fragment_second.xml" value="0.2" />
         <entry key="..\:/Users/nblad/Desktop/PDM_2022_I_P3_EQUIPO3/app/src/main/res/layout/fragment_second2.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_carnet.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_carnet_detalle.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_registrar_centro_vacunacion.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_cargos.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_carnet_detalle.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_carnet_mas_detalle.xml" value="0.33" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_carnet_vacunacion.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/activity_ver_empleado.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_carnet.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto/PDM_2022_I_P3_EQUIPO2/app/src/main/res/layout/content_registrar_carnet_detalle.xml" value="0.2" />
       </map>
     </option>
   </component>

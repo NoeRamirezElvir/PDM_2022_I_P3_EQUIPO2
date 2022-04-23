@@ -37,15 +37,12 @@ var activity:VerCarnetDetalleActivity?=null,var activity2:VerCarnetMasDetalleAct
                     .setPositiveButton("Si") {_,_ ->
                         if(activity!=null){
                             activity!!.callServiceDeleteCarnetDetalle(lista!!,position)
-                            activity!!.callServiceGetCarnetDetalle()
                         }
                         if(activity2!=null){
                             activity2!!.callServiceDeleteCarnetDetalle(lista!!,position)
-                            activity2!!.callServiceGetCarnetDetalle()
                         }
                         if(activity3!=null){
                             activity3!!.callServiceDeleteCarnetDetalle(lista!!,position)
-                            activity3!!.callServiceGetCarnetDetalle()
                         }
                     }
                     .setNegativeButton("No"){_,_ ->
