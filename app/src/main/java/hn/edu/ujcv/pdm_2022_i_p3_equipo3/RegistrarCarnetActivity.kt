@@ -39,11 +39,10 @@ class RegistrarCarnetActivity : AppCompatActivity() {
         binding.contentCarnetEncabezado.txtIdEncabezado.setText("0")
         callServiceGetCiviles()
         obtenerCarnetEncabezado()
-        if(!binding.contentCarnetEncabezado.txtIdEncabezado.text.isNullOrEmpty()){
-            callServiceGetCarnetDetalle()
-        }else{
-            actualizarRecyclerView(null)
-        }
+        actualizarDetalles()
+        binding.contentCarnetEncabezado.imvButtonActualizarCarnetsDetalles.setOnClickListener {
+            actualizarDetalles() }
+
         validarEncabezado()
         ///
         binding.contentCarnetEncabezado.btnAgregarDetalle.setOnClickListener {
@@ -69,8 +68,17 @@ class RegistrarCarnetActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun actualizarDetalles() {
+        if(!binding.contentCarnetEncabezado.txtIdEncabezado.text.isNullOrEmpty()){
+            callServiceGetCarnetDetalle()
+        }else{
+            actualizarRecyclerView(null)
+        }
+    }
+
     fun actualizarRecyclerView(lista:ArrayList<CarnetDetallesDataCollectionItem>?){
-        adapter = RecyclerAdapterCarnetDetalle(lista)
+        adapter = RecyclerAdapterCarnetDetalle(lista,activity3=this)
         binding.contentCarnetEncabezado.recyclerDetallesC.adapter = adapter
     }
     private fun enviar(){
@@ -215,6 +223,7 @@ class RegistrarCarnetActivity : AppCompatActivity() {
                 response: Response<List<CarnetDetallesDataCollectionItem>>
             ) {
                 val detalles = response.body()!!
+                listaDetalles = arrayListOf()
                 for(item in detalles){
                     if(item.id_carnetEncabezado == binding.contentCarnetEncabezado.txtIdEncabezado.text.toString().toInt()){
                         listaDetalles!!.add(item)

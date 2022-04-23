@@ -35,6 +35,7 @@ class VerCarnetDetalleActivity : AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         binding.contentCarnetDetalle.recyclerCarnetDetalleD.layoutManager = layoutManager
         callServiceGetCarnetDetalle()
+        binding.imvButtonActualizarCarnetsDetallesVista.setOnClickListener { callServiceGetCarnetDetalle() }
         binding.imbtBuscarDetalle.setOnClickListener {
             if(binding.txtBuscarIdCarnetDetalle.text.isNullOrEmpty()){
                 Toast.makeText(this@VerCarnetDetalleActivity,"ID esta Vacío", Toast.LENGTH_LONG).show()
@@ -50,6 +51,7 @@ class VerCarnetDetalleActivity : AppCompatActivity() {
         //
 
     }
+
     fun actualizarRecyclerView(lista:ArrayList<CarnetDetallesDataCollectionItem>?){
         adapter = RecyclerAdapterCarnetDetalle(lista = lista, activity = this)
        binding.contentCarnetDetalle.recyclerCarnetDetalleD.adapter = adapter
@@ -128,7 +130,7 @@ class VerCarnetDetalleActivity : AppCompatActivity() {
                             Toast.makeText(this@VerCarnetDetalleActivity,errorResponse.errorDetails, Toast.LENGTH_LONG).show()
                         }
                         else -> {
-                            Toast.makeText(this@VerCarnetDetalleActivity,"Fallo al traer el item",Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@VerCarnetDetalleActivity,"Fallo al traer el item o se esta usando en otro registro",Toast.LENGTH_LONG).show()
                         }
                     }
                 }

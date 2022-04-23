@@ -37,6 +37,9 @@ class VerEmpleadosActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbarEmpleado)
         callServiceGetEmpleados()
+        binding.fab2.setOnClickListener{
+            callServiceGetEmpleados()
+        }
         //-----------------------------------------------
         layoutManager = LinearLayoutManager(this)
         binding.contentEmpleado.recyclerEmpleado.layoutManager = layoutManager
@@ -199,7 +202,7 @@ class VerEmpleadosActivity : AppCompatActivity() {
                             Toast.makeText(this@VerEmpleadosActivity,"Sesion Expirada",Toast.LENGTH_LONG).show()
                         }
                         else -> {
-                            Toast.makeText(this@VerEmpleadosActivity,"Fallo al traer el item",Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@VerEmpleadosActivity,"Fallo al traer el item o se esta utilizando en otro registro",Toast.LENGTH_LONG).show()
                         }
                     }
                 }

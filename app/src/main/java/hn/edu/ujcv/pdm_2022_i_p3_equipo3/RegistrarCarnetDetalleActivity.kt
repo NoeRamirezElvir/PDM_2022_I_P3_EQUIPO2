@@ -5,10 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.core.widget.doAfterTextChanged
 import com.google.gson.Gson
 import hn.edu.ujcv.pdm_2022_i_p3_equipo3.adapters.SpinnerAdapterIDString
@@ -19,6 +16,7 @@ import kotlinx.android.synthetic.main.content_registrar_civil.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.lang.Exception
 import java.util.*
 import java.text.SimpleDateFormat
 import kotlin.collections.ArrayList
@@ -26,6 +24,8 @@ import kotlin.collections.ArrayList
 class RegistrarCarnetDetalleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrarCarnetDetalleBinding
     private val formatDate = SimpleDateFormat("yyyy-MM-dd",Locale.US)
+    private var m:String?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrarCarnetDetalleBinding.inflate(layoutInflater)
@@ -43,11 +43,7 @@ class RegistrarCarnetDetalleActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.contentCarnetDetalle.btnRegistrarDetalleD.setOnClickListener{
-            if(validarEntradas()){
-                Toast.makeText(this@RegistrarCarnetDetalleActivity,"Compruebe los datos", Toast.LENGTH_LONG).show()
-            }else{
-                callServicePostCarnetDetalle()
-            }
+            callServiceGetCarnetDetalleSpinner()
         }
         binding.contentCarnetDetalle.imvButtonActualizar.setOnClickListener {
             if(validarEntradas()){
@@ -65,6 +61,15 @@ class RegistrarCarnetDetalleActivity : AppCompatActivity() {
         val lista = resources.getStringArray(R.array.spnDosis)
         val adaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1,lista)
         spinner.adapter = adaptador
+        spinner.onItemSelectedListener= object :AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                m = null
+            }
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
     }
     fun spinnerUnidades(lista: ArrayList<SpinnerAdapterIDString>){
         val spinner = findViewById<Spinner>(R.id.spnUnidadDetalle)
@@ -75,6 +80,15 @@ class RegistrarCarnetDetalleActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.spnIdDetalle)
         val adaptador = ArrayAdapter(this,android.R.layout.simple_list_item_1,lista)
         spinner.adapter = adaptador
+        spinner.onItemSelectedListener= object :AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                m = null
+            }
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+        }
     }
     fun spinnerEmpleados(lista: ArrayList<SpinnerAdapterIDString>){
         val spinner = findViewById<Spinner>(R.id.spnIDVacunador)
@@ -162,6 +176,67 @@ class RegistrarCarnetDetalleActivity : AppCompatActivity() {
                 spinnerIdDetalle(detalles)
             }
         })
+    }
+    private fun callServiceGetCarnetDetalleSpinner(){
+            val detalleService: CarnetDetalleService = RestEngine.buildService().create(
+                CarnetDetalleService::class.java)
+            val result: Call<List<CarnetDetallesDataCollectionItem>> = detalleService.listCarnetDetalle()
+            result.enqueue(object: Callback<List<CarnetDetallesDataCollectionItem>> {
+                override fun onFailure(call: Call<List<CarnetDetallesDataCollectionItem>>, t: Throwable) {
+                    Toast.makeText(this@RegistrarCarnetDetalleActivity,"Error", Toast.LENGTH_LONG).show()
+                }
+                override fun onResponse(
+                    call: Call<List<CarnetDetallesDataCollectionItem>>,
+                    response: Response<List<CarnetDetallesDataCollectionItem>>
+                ) {
+                    when {
+                        response.isSuccessful -> {
+                            val detalles = response.body()!!
+                            val listaDetalles = ArrayList<CarnetDetallesDataCollectionItem>()
+                            for(item in detalles){
+                                if(item.id_carnetEncabezado == (itemSpinner(binding.contentCarnetDetalle.spnIdDetalle).id).toInt()){
+                                    listaDetalles.add(item)
+                                }
+                            }
+                            validarDosis(listaDetalles)
+                            botonRegistrar()
+                        }
+                        response.code()==401 -> {
+                            Toast.makeText(this@RegistrarCarnetDetalleActivity,"Sesion Expirada",Toast.LENGTH_LONG).show()
+                        }
+                        response.code()==500 -> {
+                            val errorResponse = Gson().fromJson(response.errorBody()!!.string(), RestApiError::class.java)
+                            Toast.makeText(this@RegistrarCarnetDetalleActivity,errorResponse.errorDetails, Toast.LENGTH_LONG).show()
+                        }
+                        else -> {
+                            Toast.makeText(this@RegistrarCarnetDetalleActivity,"Error",Toast.LENGTH_LONG).show()
+                        }
+                    }
+                }
+            })
+    }
+    fun botonRegistrar(){
+        when {
+            validarEntradas() -> {
+                Toast.makeText(this@RegistrarCarnetDetalleActivity,"Compruebe los datos", Toast.LENGTH_LONG).show()
+            }
+            m!=null -> {
+                Toast.makeText(this@RegistrarCarnetDetalleActivity,m, Toast.LENGTH_LONG).show()
+            }
+            else -> {
+                callServicePostCarnetDetalle()
+                m = null
+            }
+        }
+    }
+
+    private fun validarDosis(listaDetalles: ArrayList<CarnetDetallesDataCollectionItem>){
+        for(item in listaDetalles){
+            if(binding.contentCarnetDetalle.spnDosisDetalle.selectedItem == (item.dosis)){
+                m = "La dosis ya se ha registrado"
+                break
+            }
+        }
     }
     private fun datePickerMetodo(){
         binding.contentCarnetDetalle.txtFechaCarnetD.setOnClickListener(View.OnClickListener {
@@ -275,6 +350,7 @@ class RegistrarCarnetDetalleActivity : AppCompatActivity() {
             binding.contentCarnetDetalle.txtFechaCarnetD.text.isNullOrEmpty() -> true
             binding.contentCarnetDetalle.editTextTextPersonName6.text.isNullOrEmpty() -> true
             !binding.contentCarnetDetalle.editTextTextPersonName6.error.isNullOrEmpty() -> true
+            //m!=null -> true
             else -> false
         }
     }

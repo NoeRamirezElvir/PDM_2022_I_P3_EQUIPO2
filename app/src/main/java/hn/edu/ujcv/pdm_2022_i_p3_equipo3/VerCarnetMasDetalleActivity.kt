@@ -33,6 +33,7 @@ class VerCarnetMasDetalleActivity : AppCompatActivity() {
 
         obtenerCarnetEncabezado()
         callServiceGetCarnetDetalle()
+        binding.imvButtonActualizarEncabezadoMasDetalles.setOnClickListener { callServiceGetCarnetDetalle() }
 
     }
     fun actualizarRecyclerView(lista:ArrayList<CarnetDetallesDataCollectionItem>){
@@ -63,6 +64,7 @@ class VerCarnetMasDetalleActivity : AppCompatActivity() {
                 call: Call<List<CarnetDetallesDataCollectionItem>>,
                 response: Response<List<CarnetDetallesDataCollectionItem>>
             ) {
+                listaDetalles = arrayListOf()
                 val detalles = response.body()!!
                 for(item in detalles){
                     if(item.id_carnetEncabezado == encabezado.id_carnetEncabezado!!.toInt()){
@@ -93,7 +95,7 @@ class VerCarnetMasDetalleActivity : AppCompatActivity() {
                             Toast.makeText(this@VerCarnetMasDetalleActivity,"Sesion Expirada",Toast.LENGTH_LONG).show()
                         }
                         else -> {
-                            Toast.makeText(this@VerCarnetMasDetalleActivity,"Fallo al traer el item",Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@VerCarnetMasDetalleActivity,"Fallo al traer el item o se esta usando en otro registro",Toast.LENGTH_LONG).show()
                         }
                     }
                 }

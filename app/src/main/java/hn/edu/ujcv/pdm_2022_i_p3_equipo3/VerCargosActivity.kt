@@ -39,6 +39,9 @@ class VerCargosActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbarVerCargos)
         //
         callServiceGetCargos()
+        binding.fabActualizarCargos.setOnClickListener {
+            callServiceGetCargos()
+        }
         layoutManager = LinearLayoutManager(this)
         binding.contentCargos.recyclerViewCargos.layoutManager = layoutManager
         //
@@ -183,7 +186,7 @@ class VerCargosActivity : AppCompatActivity() {
                         else -> {
                             Toast.makeText(
                                 this@VerCargosActivity,
-                                "Fallo al traer el item",
+                                "Fallo al traer el item o se esta usando en otro registro",
                                 Toast.LENGTH_LONG
                             ).show()
                         }
